@@ -25,23 +25,23 @@ export const Footer = () => {
   return (
     <footer className="bg-foreground text-background">
       <div className="container-custom section-padding">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12">
           {/* Brand */}
-          <div className="space-y-4">
+          <div className="space-y-4 sm:col-span-2 lg:col-span-1">
             <Link to="/" className="flex items-center gap-2">
               <div className="relative">
-                <Cloud className="h-8 w-8 text-primary" />
-                <div className="absolute -bottom-1 -right-1 h-3 w-3 rounded-full bg-secondary" />
+                <Cloud className="h-7 w-7 sm:h-8 sm:w-8 text-primary" />
+                <div className="absolute -bottom-0.5 -right-0.5 sm:-bottom-1 sm:-right-1 h-2.5 w-2.5 sm:h-3 sm:w-3 rounded-full bg-secondary" />
               </div>
-              <span className="text-xl font-display font-bold text-primary-foreground">
+              <span className="text-lg sm:text-xl font-display font-bold text-primary-foreground">
                 Clouignitia
               </span>
             </Link>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-xs sm:text-sm text-muted-foreground max-w-xs">
               Empowering businesses with cutting-edge cloud solutions and DevOps
               expertise. Your trusted partner for digital transformation.
             </p>
-            <div className="flex gap-4">
+            <div className="flex gap-3 sm:gap-4">
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
@@ -49,7 +49,7 @@ export const Footer = () => {
                   aria-label={social.name}
                   className="p-2 rounded-lg bg-muted/10 hover:bg-primary/20 transition-colors"
                 >
-                  <social.icon className="h-5 w-5" />
+                  <social.icon className="h-4 w-4 sm:h-5 sm:w-5" />
                 </a>
               ))}
             </div>
@@ -57,13 +57,13 @@ export const Footer = () => {
 
           {/* Company Links */}
           <div>
-            <h4 className="font-semibold text-lg mb-4">Company</h4>
-            <ul className="space-y-3">
+            <h4 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4">Company</h4>
+            <ul className="space-y-2 sm:space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.path}>
                   <Link
                     to={link.path}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                    className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -74,13 +74,13 @@ export const Footer = () => {
 
           {/* Services Links */}
           <div>
-            <h4 className="font-semibold text-lg mb-4">Services</h4>
-            <ul className="space-y-3">
+            <h4 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4">Services</h4>
+            <ul className="space-y-2 sm:space-y-3">
               {footerLinks.services.map((link) => (
                 <li key={link.path}>
                   <Link
                     to={link.path}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                    className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -91,18 +91,18 @@ export const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h4 className="font-semibold text-lg mb-4">Contact Us</h4>
-            <ul className="space-y-3">
-              <li className="flex items-center gap-3 text-sm text-muted-foreground">
-                <Mail className="h-4 w-4 text-primary" />
-                <span>info@clouignitia.com</span>
+            <h4 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4">Contact Us</h4>
+            <ul className="space-y-2 sm:space-y-3">
+              <li className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm text-muted-foreground">
+                <Mail className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-primary shrink-0" />
+                <span className="break-all">info@clouignitia.com</span>
               </li>
-              <li className="flex items-center gap-3 text-sm text-muted-foreground">
-                <Phone className="h-4 w-4 text-primary" />
+              <li className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm text-muted-foreground">
+                <Phone className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-primary shrink-0" />
                 <span>+1 (555) 123-4567</span>
               </li>
-              <li className="flex items-start gap-3 text-sm text-muted-foreground">
-                <MapPin className="h-4 w-4 text-primary mt-0.5" />
+              <li className="flex items-start gap-2 sm:gap-3 text-xs sm:text-sm text-muted-foreground">
+                <MapPin className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-primary mt-0.5 shrink-0" />
                 <span>123 Cloud Street, Tech City, TC 12345</span>
               </li>
             </ul>
@@ -110,16 +110,16 @@ export const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-muted/20">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-muted-foreground">
+        <div className="mt-8 sm:mt-10 md:mt-12 pt-6 sm:pt-8 border-t border-muted/20">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p className="text-xs sm:text-sm text-muted-foreground text-center sm:text-left">
               © {new Date().getFullYear()} Clouignitia. All rights reserved.
             </p>
-            <div className="flex gap-6">
-              <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+            <div className="flex gap-4 sm:gap-6">
+              <a href="#" className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+              <a href="#" className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors">
                 Terms of Service
               </a>
             </div>
