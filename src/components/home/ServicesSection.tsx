@@ -1,35 +1,32 @@
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Cloud, Server, GitBranch, ArrowRight } from "lucide-react";
+import { GitBranch, ArrowRight } from "lucide-react";
+import { GCPLogo, AWSLogo, AzureLogo } from "@/components/logos";
 
 const services = [
   {
-    icon: Cloud,
+    Logo: GCPLogo,
     title: "Google Cloud Platform",
     description: "Leverage GCP's cutting-edge AI/ML capabilities, BigQuery analytics, and global infrastructure for scalable solutions.",
-    color: "text-primary",
-    bgColor: "bg-primary/10",
+    bgColor: "bg-blue-50 dark:bg-blue-950/30",
   },
   {
-    icon: Cloud,
+    Logo: AWSLogo,
     title: "Amazon Web Services",
     description: "Build on AWS's comprehensive suite of services, from EC2 to Lambda, with enterprise-grade security and reliability.",
-    color: "text-secondary",
-    bgColor: "bg-secondary/10",
+    bgColor: "bg-orange-50 dark:bg-orange-950/30",
   },
   {
-    icon: Server,
+    Logo: AzureLogo,
     title: "Microsoft Azure",
     description: "Integrate seamlessly with Microsoft ecosystem, hybrid cloud capabilities, and enterprise-ready solutions.",
-    color: "text-primary",
-    bgColor: "bg-primary/10",
+    bgColor: "bg-sky-50 dark:bg-sky-950/30",
   },
   {
     icon: GitBranch,
     title: "DevOps Solutions",
     description: "Accelerate delivery with CI/CD pipelines, Infrastructure as Code, container orchestration, and monitoring.",
-    color: "text-secondary",
     bgColor: "bg-secondary/10",
   },
 ];
@@ -59,8 +56,12 @@ export const ServicesSection = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardHeader>
-                <div className={`w-14 h-14 rounded-xl ${service.bgColor} flex items-center justify-center mb-4`}>
-                  <service.icon className={`w-7 h-7 ${service.color}`} />
+                <div className={`w-14 h-14 rounded-xl ${service.bgColor} flex items-center justify-center mb-4 p-2`}>
+                  {service.Logo ? (
+                    <service.Logo className="w-full h-full" />
+                  ) : service.icon ? (
+                    <service.icon className="w-7 h-7 text-secondary" />
+                  ) : null}
                 </div>
                 <CardTitle className="text-lg">{service.title}</CardTitle>
               </CardHeader>
