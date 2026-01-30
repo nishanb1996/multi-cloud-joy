@@ -58,7 +58,6 @@ const Contact = () => {
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
-    // Clear error when user starts typing
     if (errors[name as keyof ContactFormData]) {
       setErrors((prev) => ({ ...prev, [name]: undefined }));
     }
@@ -77,10 +76,7 @@ const Contact = () => {
     setErrors({});
 
     try {
-      // Validate form data
       const validatedData = contactSchema.parse(formData);
-
-      // Simulate API call (replace with actual email service integration)
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
       toast({
@@ -88,7 +84,6 @@ const Contact = () => {
         description: "Thank you for contacting us. We'll get back to you soon.",
       });
 
-      // Reset form
       setFormData({
         name: "",
         email: "",
@@ -122,13 +117,13 @@ const Contact = () => {
       {/* Hero Section */}
       <section className="section-padding bg-gradient-to-br from-accent via-background to-muted">
         <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center">
-            <p className="text-primary font-medium mb-4">Contact Us</p>
-            <h1 className="text-4xl md:text-5xl font-display font-bold mb-6">
+          <div className="max-w-3xl mx-auto text-center px-4">
+            <p className="text-primary font-medium mb-3 sm:mb-4 text-sm sm:text-base">Contact Us</p>
+            <h1 className="text-responsive-xl font-display font-bold mb-4 sm:mb-6">
               Let's Start Your
               <span className="gradient-text block">Cloud Journey</span>
             </h1>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-base sm:text-lg text-muted-foreground">
               Ready to transform your infrastructure? Get in touch with our team
               for a free consultation and discover how we can help.
             </p>
@@ -139,19 +134,19 @@ const Contact = () => {
       {/* Contact Section */}
       <section className="section-padding">
         <div className="container-custom">
-          <div className="grid lg:grid-cols-3 gap-12">
+          <div className="grid lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
             {/* Contact Form */}
             <div className="lg:col-span-2">
               <Card className="border-0 shadow-lg">
-                <CardContent className="p-8">
-                  <h2 className="text-2xl font-display font-bold mb-6">
+                <CardContent className="p-5 sm:p-6 md:p-8">
+                  <h2 className="text-xl sm:text-2xl font-display font-bold mb-4 sm:mb-6">
                     Send Us a Message
                   </h2>
 
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid sm:grid-cols-2 gap-6">
-                      <div className="space-y-2">
-                        <Label htmlFor="name">
+                  <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+                    <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
+                      <div className="space-y-1.5 sm:space-y-2">
+                        <Label htmlFor="name" className="text-sm">
                           Name <span className="text-destructive">*</span>
                         </Label>
                         <Input
@@ -160,15 +155,15 @@ const Contact = () => {
                           value={formData.name}
                           onChange={handleChange}
                           placeholder="John Doe"
-                          className={errors.name ? "border-destructive" : ""}
+                          className={`text-sm sm:text-base ${errors.name ? "border-destructive" : ""}`}
                         />
                         {errors.name && (
-                          <p className="text-sm text-destructive">{errors.name}</p>
+                          <p className="text-xs sm:text-sm text-destructive">{errors.name}</p>
                         )}
                       </div>
 
-                      <div className="space-y-2">
-                        <Label htmlFor="email">
+                      <div className="space-y-1.5 sm:space-y-2">
+                        <Label htmlFor="email" className="text-sm">
                           Email <span className="text-destructive">*</span>
                         </Label>
                         <Input
@@ -178,28 +173,29 @@ const Contact = () => {
                           value={formData.email}
                           onChange={handleChange}
                           placeholder="john@company.com"
-                          className={errors.email ? "border-destructive" : ""}
+                          className={`text-sm sm:text-base ${errors.email ? "border-destructive" : ""}`}
                         />
                         {errors.email && (
-                          <p className="text-sm text-destructive">{errors.email}</p>
+                          <p className="text-xs sm:text-sm text-destructive">{errors.email}</p>
                         )}
                       </div>
                     </div>
 
-                    <div className="grid sm:grid-cols-2 gap-6">
-                      <div className="space-y-2">
-                        <Label htmlFor="company">Company (Optional)</Label>
+                    <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
+                      <div className="space-y-1.5 sm:space-y-2">
+                        <Label htmlFor="company" className="text-sm">Company (Optional)</Label>
                         <Input
                           id="company"
                           name="company"
                           value={formData.company}
                           onChange={handleChange}
                           placeholder="Your Company"
+                          className="text-sm sm:text-base"
                         />
                       </div>
 
-                      <div className="space-y-2">
-                        <Label htmlFor="service">
+                      <div className="space-y-1.5 sm:space-y-2">
+                        <Label htmlFor="service" className="text-sm">
                           Service Interest <span className="text-destructive">*</span>
                         </Label>
                         <Select
@@ -207,7 +203,7 @@ const Contact = () => {
                           onValueChange={handleServiceChange}
                         >
                           <SelectTrigger
-                            className={errors.service ? "border-destructive" : ""}
+                            className={`text-sm sm:text-base ${errors.service ? "border-destructive" : ""}`}
                           >
                             <SelectValue placeholder="Select a service" />
                           </SelectTrigger>
@@ -220,13 +216,13 @@ const Contact = () => {
                           </SelectContent>
                         </Select>
                         {errors.service && (
-                          <p className="text-sm text-destructive">{errors.service}</p>
+                          <p className="text-xs sm:text-sm text-destructive">{errors.service}</p>
                         )}
                       </div>
                     </div>
 
-                    <div className="space-y-2">
-                      <Label htmlFor="message">
+                    <div className="space-y-1.5 sm:space-y-2">
+                      <Label htmlFor="message" className="text-sm">
                         Message <span className="text-destructive">*</span>
                       </Label>
                       <Textarea
@@ -235,11 +231,11 @@ const Contact = () => {
                         value={formData.message}
                         onChange={handleChange}
                         placeholder="Tell us about your project and requirements..."
-                        rows={6}
-                        className={errors.message ? "border-destructive" : ""}
+                        rows={5}
+                        className={`text-sm sm:text-base ${errors.message ? "border-destructive" : ""}`}
                       />
                       {errors.message && (
-                        <p className="text-sm text-destructive">{errors.message}</p>
+                        <p className="text-xs sm:text-sm text-destructive">{errors.message}</p>
                       )}
                     </div>
 
@@ -264,63 +260,63 @@ const Contact = () => {
             </div>
 
             {/* Contact Info */}
-            <div className="space-y-8">
+            <div className="space-y-4 sm:space-y-6 lg:space-y-8">
               {/* Contact Details */}
               <Card className="border-0 shadow-lg">
-                <CardContent className="p-8 space-y-6">
-                  <h3 className="text-xl font-semibold">Contact Information</h3>
+                <CardContent className="p-5 sm:p-6 md:p-8 space-y-4 sm:space-y-6">
+                  <h3 className="text-lg sm:text-xl font-semibold">Contact Information</h3>
 
-                  <div className="space-y-4">
-                    <div className="flex items-start gap-4">
-                      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                        <Mail className="w-5 h-5 text-primary" />
+                  <div className="space-y-3 sm:space-y-4">
+                    <div className="flex items-start gap-3 sm:gap-4">
+                      <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                        <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
                       </div>
                       <div>
-                        <p className="font-medium">Email</p>
+                        <p className="font-medium text-sm sm:text-base">Email</p>
                         <a
                           href="mailto:info@clouignitia.com"
-                          className="text-muted-foreground hover:text-primary transition-colors"
+                          className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors break-all"
                         >
                           info@clouignitia.com
                         </a>
                       </div>
                     </div>
 
-                    <div className="flex items-start gap-4">
-                      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                        <Phone className="w-5 h-5 text-primary" />
+                    <div className="flex items-start gap-3 sm:gap-4">
+                      <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                        <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
                       </div>
                       <div>
-                        <p className="font-medium">Phone</p>
+                        <p className="font-medium text-sm sm:text-base">Phone</p>
                         <a
                           href="tel:+15551234567"
-                          className="text-muted-foreground hover:text-primary transition-colors"
+                          className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors"
                         >
                           +1 (555) 123-4567
                         </a>
                       </div>
                     </div>
 
-                    <div className="flex items-start gap-4">
-                      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                        <MapPin className="w-5 h-5 text-primary" />
+                    <div className="flex items-start gap-3 sm:gap-4">
+                      <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                        <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
                       </div>
                       <div>
-                        <p className="font-medium">Address</p>
-                        <p className="text-muted-foreground">
+                        <p className="font-medium text-sm sm:text-base">Address</p>
+                        <p className="text-xs sm:text-sm text-muted-foreground">
                           123 Cloud Street<br />
                           Tech City, TC 12345
                         </p>
                       </div>
                     </div>
 
-                    <div className="flex items-start gap-4">
-                      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                        <Clock className="w-5 h-5 text-primary" />
+                    <div className="flex items-start gap-3 sm:gap-4">
+                      <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                        <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
                       </div>
                       <div>
-                        <p className="font-medium">Business Hours</p>
-                        <p className="text-muted-foreground">
+                        <p className="font-medium text-sm sm:text-base">Business Hours</p>
+                        <p className="text-xs sm:text-sm text-muted-foreground">
                           Mon - Fri: 9:00 AM - 6:00 PM<br />
                           24/7 Support Available
                         </p>
@@ -332,17 +328,17 @@ const Contact = () => {
 
               {/* Social Links */}
               <Card className="border-0 shadow-lg">
-                <CardContent className="p-8">
-                  <h3 className="text-xl font-semibold mb-4">Follow Us</h3>
-                  <div className="flex gap-4">
+                <CardContent className="p-5 sm:p-6 md:p-8">
+                  <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">Follow Us</h3>
+                  <div className="flex gap-3 sm:gap-4">
                     {socialLinks.map((social) => (
                       <a
                         key={social.name}
                         href={social.href}
                         aria-label={social.name}
-                        className="w-12 h-12 rounded-lg bg-muted flex items-center justify-center hover:bg-primary/10 hover:text-primary transition-colors"
+                        className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-muted flex items-center justify-center hover:bg-primary/10 hover:text-primary transition-colors"
                       >
-                        <social.icon className="w-5 h-5" />
+                        <social.icon className="w-4 h-4 sm:w-5 sm:h-5" />
                       </a>
                     ))}
                   </div>
@@ -352,9 +348,9 @@ const Contact = () => {
               {/* Map Placeholder */}
               <Card className="border-0 shadow-lg overflow-hidden">
                 <div className="aspect-video bg-muted flex items-center justify-center">
-                  <div className="text-center">
-                    <MapPin className="w-12 h-12 text-muted-foreground mx-auto mb-2" />
-                    <p className="text-sm text-muted-foreground">
+                  <div className="text-center p-4">
+                    <MapPin className="w-10 h-10 sm:w-12 sm:h-12 text-muted-foreground mx-auto mb-2" />
+                    <p className="text-xs sm:text-sm text-muted-foreground">
                       Map placeholder - Add your location
                     </p>
                   </div>
