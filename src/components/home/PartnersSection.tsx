@@ -1,18 +1,17 @@
+import { GCPLogo, AWSLogo, AzureLogo } from "@/components/logos";
+
 const partners = [
   {
     name: "Google Cloud Platform",
-    logo: "GCP",
-    color: "from-primary to-primary/80",
+    Logo: GCPLogo,
   },
   {
     name: "Amazon Web Services",
-    logo: "AWS",
-    color: "from-secondary to-secondary/80",
+    Logo: AWSLogo,
   },
   {
     name: "Microsoft Azure",
-    logo: "Azure",
-    color: "from-primary to-secondary",
+    Logo: AzureLogo,
   },
 ];
 
@@ -26,16 +25,14 @@ export const PartnersSection = () => {
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
           {partners.map((partner) => (
             <div
               key={partner.name}
-              className="group flex items-center gap-3 px-6 py-3 rounded-xl bg-card shadow-sm hover:shadow-md transition-all"
+              className="group flex items-center gap-4 px-6 py-4 rounded-xl bg-card shadow-sm hover:shadow-md transition-all border border-border/50"
             >
-              <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${partner.color} flex items-center justify-center`}>
-                <span className="text-white text-xs font-bold">{partner.logo}</span>
-              </div>
-              <span className="font-medium text-foreground group-hover:text-primary transition-colors">
+              <partner.Logo className="h-8 w-auto" />
+              <span className="font-medium text-foreground group-hover:text-primary transition-colors hidden sm:inline">
                 {partner.name}
               </span>
             </div>

@@ -3,9 +3,6 @@ import { Layout } from "@/components/layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
-  Cloud,
-  Server,
-  Database,
   GitBranch,
   ArrowRight,
   CheckCircle,
@@ -13,15 +10,16 @@ import {
   Activity,
   Code,
   Settings,
+  Server,
 } from "lucide-react";
+import { GCPLogo, AWSLogo, AzureLogo } from "@/components/logos";
 
 const cloudServices = [
   {
     id: "gcp",
-    icon: Cloud,
+    Logo: GCPLogo,
     title: "Google Cloud Platform",
-    color: "text-primary",
-    bgColor: "bg-primary/10",
+    bgColor: "bg-blue-50 dark:bg-blue-950/30",
     description:
       "Leverage Google's world-class infrastructure for your applications with cutting-edge AI/ML capabilities and unmatched data analytics.",
     features: [
@@ -35,10 +33,9 @@ const cloudServices = [
   },
   {
     id: "aws",
-    icon: Server,
+    Logo: AWSLogo,
     title: "Amazon Web Services",
-    color: "text-secondary",
-    bgColor: "bg-secondary/10",
+    bgColor: "bg-orange-50 dark:bg-orange-950/30",
     description:
       "Build on the world's most comprehensive cloud platform with industry-leading services for compute, storage, and enterprise solutions.",
     features: [
@@ -52,10 +49,9 @@ const cloudServices = [
   },
   {
     id: "azure",
-    icon: Database,
+    Logo: AzureLogo,
     title: "Microsoft Azure",
-    color: "text-primary",
-    bgColor: "bg-primary/10",
+    bgColor: "bg-sky-50 dark:bg-sky-950/30",
     description:
       "Seamlessly integrate with Microsoft ecosystem and leverage hybrid cloud capabilities for enterprise-ready solutions.",
     features: [
@@ -152,8 +148,8 @@ const Services = () => {
                 <div className={`grid lg:grid-cols-2 ${index % 2 === 1 ? "lg:flex-row-reverse" : ""}`}>
                   <CardHeader className={`${service.bgColor} p-8 lg:p-12 flex flex-col justify-center`}>
                     <div className="space-y-6">
-                      <div className={`w-16 h-16 rounded-xl bg-background/80 flex items-center justify-center`}>
-                        <service.icon className={`w-8 h-8 ${service.color}`} />
+                      <div className="w-20 h-16 rounded-xl bg-background/80 flex items-center justify-center p-3">
+                        <service.Logo className="w-full h-full" />
                       </div>
                       <CardTitle className="text-2xl md:text-3xl font-display">
                         {service.title}
