@@ -34,7 +34,7 @@ export const Footer = () => {
                 <div className="absolute -bottom-0.5 -right-0.5 sm:-bottom-1 sm:-right-1 h-2.5 w-2.5 sm:h-3 sm:w-3 rounded-full bg-secondary" />
               </div>
               <span className="text-lg sm:text-xl font-display font-bold text-primary-foreground">
-                Clouignitia
+                Cloudignitia
               </span>
             </Link>
             <p className="text-xs sm:text-sm text-muted-foreground max-w-xs">
@@ -95,7 +95,7 @@ export const Footer = () => {
             <ul className="space-y-2 sm:space-y-3">
               <li className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm text-muted-foreground">
                 <Mail className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-primary shrink-0" />
-                <span className="break-all">info@clouignitia.com</span>
+                <span className="break-all">info@cloudignitia.com</span>
               </li>
               <li className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm text-muted-foreground">
                 <Phone className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-primary shrink-0" />
@@ -113,7 +113,7 @@ export const Footer = () => {
         <div className="mt-8 sm:mt-10 md:mt-12 pt-6 sm:pt-8 border-t border-muted/20">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="text-xs sm:text-sm text-muted-foreground text-center sm:text-left">
-              © {new Date().getFullYear()} Clouignitia. All rights reserved.
+              © {new Date().getFullYear()} Cloudignitia. All rights reserved.
             </p>
             <div className="flex gap-4 sm:gap-6">
               <a href="#" className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors">

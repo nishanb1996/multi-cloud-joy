@@ -24,7 +24,7 @@ export const CTASection = () => {
             </h2>
 
             <p className="text-sm sm:text-base md:text-lg text-white/80 max-w-2xl mx-auto">
-              Let's discuss how Clouignitia can help you achieve your cloud and
+              Let's discuss how Cloudignitia can help you achieve your cloud and
               DevOps goals. Get a free consultation with our experts today.
             </p>
 
