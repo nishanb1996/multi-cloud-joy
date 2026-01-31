@@ -36,7 +36,7 @@ const About = () => {
       <section className="section-padding bg-gradient-to-br from-accent via-background to-muted">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center px-4">
-            <p className="text-primary font-medium mb-3 sm:mb-4 text-sm sm:text-base">About Clouignitia</p>
+            <p className="text-primary font-medium mb-3 sm:mb-4 text-sm sm:text-base">About Cloudignitia</p>
             <h1 className="text-responsive-xl font-display font-bold mb-4 sm:mb-6">
               Igniting Cloud
               <span className="gradient-text block">Transformations</span>

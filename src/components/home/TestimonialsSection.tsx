@@ -5,7 +5,7 @@ const testimonials = [
   {
     name: "Sarah Johnson",
     role: "CTO, TechStart Inc.",
-    content: "Clouignitia transformed our infrastructure. Their multi-cloud strategy reduced our costs by 40% while improving performance across the board.",
+    content: "Cloudignitia transformed our infrastructure. Their multi-cloud strategy reduced our costs by 40% while improving performance across the board.",
     rating: 5,
   },
   {
@@ -17,7 +17,7 @@ const testimonials = [
   {
     name: "Emily Rodriguez",
     role: "Director of IT, GlobalRetail",
-    content: "Working with Clouignitia has been a game-changer. Their 24/7 support and proactive monitoring give us peace of mind.",
+    content: "Working with Cloudignitia has been a game-changer. Their 24/7 support and proactive monitoring give us peace of mind.",
     rating: 5,
   },
 ];

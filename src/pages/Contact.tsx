@@ -274,10 +274,10 @@ const Contact = () => {
                       <div>
                         <p className="font-medium text-sm sm:text-base">Email</p>
                         <a
-                          href="mailto:info@clouignitia.com"
+                          href="mailto:info@cloudignitia.com"
                           className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors break-all"
                         >
-                          info@clouignitia.com
+                          info@cloudignitia.com
                         </a>
                       </div>
                     </div>

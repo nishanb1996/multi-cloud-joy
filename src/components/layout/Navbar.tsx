@@ -27,7 +27,7 @@ export const Navbar = () => {
               <div className="absolute -bottom-0.5 -right-0.5 sm:-bottom-1 sm:-right-1 h-2 w-2 sm:h-3 sm:w-3 rounded-full bg-secondary" />
             </div>
             <span className="text-lg sm:text-xl font-display font-bold gradient-text">
-              Clouignitia
+              Cloudignitia
             </span>
           </Link>
 
