@@ -345,25 +345,25 @@ const Contact = () => {
                 </CardContent>
               </Card>
 
-              {/* Google Maps */}
+              {/* Google Maps Link */}
               <Card className="border-0 shadow-lg overflow-hidden">
                 <a 
                   href="https://maps.app.goo.gl/5oLmVegrFcapTh4p8" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="block"
+                  className="block aspect-video bg-gradient-to-br from-primary/10 via-muted to-secondary/10 flex items-center justify-center hover:from-primary/20 hover:to-secondary/20 transition-all group"
                 >
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.123456789!2d79.6512!3d21.1699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c0a5a5a5a5a5%3A0x1234567890abcdef!2sCivil%20Lines%2C%20Bhandara%2C%20Maharashtra%20441904!5e0!3m2!1sen!2sin!4v1234567890"
-                    width="100%"
-                    height="200"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="Cloudignitia Location - Civil Line, Bhandara"
-                    className="pointer-events-none"
-                  />
+                  <div className="text-center p-4">
+                    <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                      <MapPin className="w-7 h-7 sm:w-8 sm:h-8 text-primary" />
+                    </div>
+                    <p className="text-sm sm:text-base font-medium text-foreground mb-1">
+                      Civil Line, Bhandara
+                    </p>
+                    <p className="text-xs sm:text-sm text-muted-foreground">
+                      Click to open in Google Maps
+                    </p>
+                  </div>
                 </a>
               </Card>
             </div>
