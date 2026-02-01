@@ -304,8 +304,8 @@ const Contact = () => {
                       <div>
                         <p className="font-medium text-sm sm:text-base">Address</p>
                         <p className="text-xs sm:text-sm text-muted-foreground">
-                          123 Cloud Street<br />
-                          Tech City, TC 12345
+                          Civil Line, Bhandara<br />
+                          Maharashtra 441904
                         </p>
                       </div>
                     </div>
@@ -345,16 +345,26 @@ const Contact = () => {
                 </CardContent>
               </Card>
 
-              {/* Map Placeholder */}
+              {/* Google Maps */}
               <Card className="border-0 shadow-lg overflow-hidden">
-                <div className="aspect-video bg-muted flex items-center justify-center">
-                  <div className="text-center p-4">
-                    <MapPin className="w-10 h-10 sm:w-12 sm:h-12 text-muted-foreground mx-auto mb-2" />
-                    <p className="text-xs sm:text-sm text-muted-foreground">
-                      Map placeholder - Add your location
-                    </p>
-                  </div>
-                </div>
+                <a 
+                  href="https://maps.app.goo.gl/5oLmVegrFcapTh4p8" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.123456789!2d79.6512!3d21.1699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c0a5a5a5a5a5%3A0x1234567890abcdef!2sCivil%20Lines%2C%20Bhandara%2C%20Maharashtra%20441904!5e0!3m2!1sen!2sin!4v1234567890"
+                    width="100%"
+                    height="200"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Cloudignitia Location - Civil Line, Bhandara"
+                    className="pointer-events-none"
+                  />
+                </a>
               </Card>
             </div>
           </div>

@@ -103,7 +103,14 @@ export const Footer = () => {
               </li>
               <li className="flex items-start gap-2 sm:gap-3 text-xs sm:text-sm text-muted-foreground">
                 <MapPin className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-primary mt-0.5 shrink-0" />
-                <span>123 Cloud Street, Tech City, TC 12345</span>
+                <a 
+                  href="https://maps.app.goo.gl/5oLmVegrFcapTh4p8" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
+                  Civil Line, Bhandara, Maharashtra 441904
+                </a>
               </li>
             </ul>
           </div>
