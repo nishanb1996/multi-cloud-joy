@@ -274,10 +274,10 @@ const Contact = () => {
                       <div>
                         <p className="font-medium text-sm sm:text-base">Email</p>
                         <a
-                          href="mailto:info@cloudignitia.com"
+                          href="mailto:cloudignitia@gmail.com"
                           className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors break-all"
                         >
-                          info@cloudignitia.com
+                          cloudignitia@gmail.com
                         </a>
                       </div>
                     </div>
@@ -289,10 +289,10 @@ const Contact = () => {
                       <div>
                         <p className="font-medium text-sm sm:text-base">Phone</p>
                         <a
-                          href="tel:+15551234567"
+                          href="tel:+918551089743"
                           className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors"
                         >
-                          +1 (555) 123-4567
+                          +91 8551089743
                         </a>
                       </div>
                     </div>
