@@ -104,8 +104,8 @@ export const Footer = () => {
               <li className="flex items-start gap-2 sm:gap-3 text-xs sm:text-sm text-muted-foreground">
                 <MapPin className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-primary mt-0.5 shrink-0" />
                 <a 
-                  href="https://maps.app.goo.gl/5oLmVegrFcapTh4p8" 
-                  target="_blank" 
+                  href="https://maps.app.goo.gl/pKPtTMZJAPRSvX7u9" 
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-primary transition-colors"
                 >
