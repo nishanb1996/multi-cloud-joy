@@ -348,8 +348,8 @@ const Contact = () => {
               {/* Google Maps Link */}
               <Card className="border-0 shadow-lg overflow-hidden">
                 <a 
-                  href="https://maps.app.goo.gl/5oLmVegrFcapTh4p8" 
-                  target="_blank" 
+                  href="https://maps.app.goo.gl/pKPtTMZJAPRSvX7u9" 
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="block aspect-video bg-gradient-to-br from-primary/10 via-muted to-secondary/10 flex items-center justify-center hover:from-primary/20 hover:to-secondary/20 transition-all group"
                 >
