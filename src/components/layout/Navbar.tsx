@@ -51,8 +51,11 @@ export const Navbar = () => {
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
+          {/* CTA Buttons */}
+          <div className="hidden md:flex items-center gap-3">
+            <Button asChild variant="ghost">
+              <Link to="/signin">Sign In</Link>
+            </Button>
             <Button asChild className="btn-gradient">
               <Link to="/contact">Get Started</Link>
             </Button>
@@ -86,7 +89,12 @@ export const Navbar = () => {
                   {link.name}
                 </Link>
               ))}
-              <Button asChild className="btn-gradient mt-3">
+              <Button asChild variant="outline" className="mt-3">
+                <Link to="/signin" onClick={() => setIsOpen(false)}>
+                  Sign In
+                </Link>
+              </Button>
+              <Button asChild className="btn-gradient mt-2">
                 <Link to="/contact" onClick={() => setIsOpen(false)}>
                   Get Started
                 </Link>
