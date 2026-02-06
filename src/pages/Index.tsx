@@ -1,9 +1,9 @@
 import { Layout } from "@/components/layout";
 import {
   HeroSection,
+  PartnersSection,
   ServicesSection,
   WhyChooseUsSection,
-  PartnersSection,
   TestimonialsSection,
   CTASection,
 } from "@/components/home";
