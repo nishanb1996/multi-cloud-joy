@@ -38,7 +38,7 @@ export const TestimonialsSection = () => {
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16 px-4">
           <p className="text-primary font-semibold mb-3 text-sm uppercase tracking-widest">Testimonials</p>
-          <h2 className="text-responsive-lg font-bold mb-6">
+          <h2 className="text-responsive-lg font-display font-bold mb-6">
             What Our Clients <span className="gradient-text">Say</span>
           </h2>
           <p className="text-muted-foreground text-lg">
@@ -81,7 +81,7 @@ export const TestimonialsSection = () => {
                     {testimonial.avatar}
                   </div>
                   <div>
-                    <p className="font-semibold">{testimonial.name}</p>
+                    <p className="font-display font-semibold">{testimonial.name}</p>
                     <p className="text-sm text-muted-foreground">
                       {testimonial.role}
                     </p>

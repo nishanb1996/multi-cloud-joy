@@ -41,7 +41,7 @@ export const Footer = () => {
                   <Cloud className="h-8 w-8 text-primary transition-transform group-hover:scale-110" />
                   <div className="absolute -bottom-1 -right-1 h-3 w-3 rounded-full bg-secondary" />
                 </div>
-                <span className="text-xl font-bold text-primary">
+                <span className="text-xl font-display font-bold text-primary">
                   Cloudignitia
                 </span>
               </Link>
@@ -65,7 +65,7 @@ export const Footer = () => {
 
             {/* Company Links */}
             <div>
-              <h4 className="font-semibold text-lg mb-5">Company</h4>
+              <h4 className="font-display font-semibold text-lg mb-5">Company</h4>
               <ul className="space-y-3">
                 {footerLinks.company.map((link) => (
                   <li key={link.path}>
@@ -83,7 +83,7 @@ export const Footer = () => {
 
             {/* Services Links */}
             <div>
-              <h4 className="font-semibold text-lg mb-5">Services</h4>
+              <h4 className="font-display font-semibold text-lg mb-5">Services</h4>
               <ul className="space-y-3">
                 {footerLinks.services.map((link) => (
                   <li key={link.path}>
@@ -101,7 +101,7 @@ export const Footer = () => {
 
             {/* Contact Info */}
             <div>
-              <h4 className="font-semibold text-lg mb-5">Contact Us</h4>
+              <h4 className="font-display font-semibold text-lg mb-5">Contact Us</h4>
               <ul className="space-y-4">
                 <li>
                   <a href="mailto:cloudignitia@gmail.com" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors group">

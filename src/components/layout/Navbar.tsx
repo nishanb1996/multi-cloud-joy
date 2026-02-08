@@ -40,7 +40,7 @@ export const Navbar = () => {
               <Cloud className="h-7 w-7 sm:h-9 sm:w-9 text-primary transition-transform group-hover:scale-110 duration-300" />
               <div className="absolute -bottom-0.5 -right-0.5 h-2.5 w-2.5 sm:h-3 sm:w-3 rounded-full bg-secondary animate-pulse" />
             </div>
-            <span className="text-xl sm:text-2xl font-bold gradient-text">
+            <span className="text-xl sm:text-2xl font-display font-bold gradient-text">
               Cloudignitia
             </span>
           </Link>

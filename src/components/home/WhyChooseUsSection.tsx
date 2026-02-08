@@ -54,7 +54,7 @@ export const WhyChooseUsSection = () => {
           <div className="space-y-8">
             <div className="text-center lg:text-left">
               <p className="text-primary font-semibold mb-3 text-sm uppercase tracking-widest">Why Choose Us</p>
-              <h2 className="text-responsive-lg font-bold mb-6">
+              <h2 className="text-responsive-lg font-display font-bold mb-6">
                 Your Trusted Cloud <span className="gradient-text">Partner</span>
               </h2>
               <p className="text-muted-foreground text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed">
@@ -74,7 +74,7 @@ export const WhyChooseUsSection = () => {
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-base mb-1">{feature.title}</h3>
+                    <h3 className="font-display font-semibold text-base mb-1">{feature.title}</h3>
                     <p className="text-sm text-muted-foreground leading-relaxed">
                       {feature.description}
                     </p>
@@ -100,7 +100,7 @@ export const WhyChooseUsSection = () => {
               {/* Center content */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center p-8 rounded-full bg-card shadow-2xl border border-border/50">
-                  <p className="text-5xl sm:text-6xl font-bold gradient-text mb-2">
+                  <p className="text-5xl sm:text-6xl font-display font-bold gradient-text mb-2">
                     10+
                   </p>
                   <p className="text-sm text-muted-foreground font-medium">

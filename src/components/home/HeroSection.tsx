@@ -33,7 +33,7 @@ export const HeroSection = () => {
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
             </div>
 
-            <h1 className="text-responsive-xl font-bold leading-[1.1] animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+            <h1 className="text-responsive-xl font-display font-bold leading-[1.1] animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
               Accelerate Your
               <span className="gradient-text-animated block mt-2">Cloud Journey</span>
             </h1>
@@ -59,15 +59,15 @@ export const HeroSection = () => {
             {/* Stats */}
             <div className="flex flex-wrap justify-center lg:justify-start gap-8 sm:gap-12 pt-8 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
               <div className="text-center lg:text-left">
-                <p className="text-4xl sm:text-5xl font-bold gradient-text">150+</p>
+                <p className="text-4xl sm:text-5xl font-display font-bold gradient-text">150+</p>
                 <p className="text-sm text-muted-foreground mt-1">Projects Delivered</p>
               </div>
               <div className="text-center lg:text-left">
-                <p className="text-4xl sm:text-5xl font-bold gradient-text">50+</p>
+                <p className="text-4xl sm:text-5xl font-display font-bold gradient-text">50+</p>
                 <p className="text-sm text-muted-foreground mt-1">Happy Clients</p>
               </div>
               <div className="text-center lg:text-left">
-                <p className="text-4xl sm:text-5xl font-bold gradient-text">99.9%</p>
+                <p className="text-4xl sm:text-5xl font-display font-bold gradient-text">99.9%</p>
                 <p className="text-sm text-muted-foreground mt-1">Uptime Guaranteed</p>
               </div>
             </div>
