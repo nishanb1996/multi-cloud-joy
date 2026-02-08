@@ -48,7 +48,7 @@ export const ServicesSection = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20 px-4">
           <p className="text-primary font-semibold mb-3 text-sm uppercase tracking-widest">Our Services</p>
-          <h2 className="text-responsive-lg font-bold mb-6">
+          <h2 className="text-responsive-lg font-display font-bold mb-6">
             Multi-Cloud <span className="gradient-text">Excellence</span>
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
@@ -72,7 +72,7 @@ export const ServicesSection = () => {
                     <service.icon className="w-8 h-8 text-violet-600" />
                   ) : null}
                 </div>
-                <CardTitle className="text-xl font-bold">{service.title}</CardTitle>
+                <CardTitle className="text-xl font-display font-bold">{service.title}</CardTitle>
               </CardHeader>
               <CardContent className="p-6 pt-0">
                 <CardDescription className="text-sm leading-relaxed text-muted-foreground">

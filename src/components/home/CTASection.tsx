@@ -41,7 +41,7 @@ export const CTASection = () => {
               </div>
 
               {/* Heading */}
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white leading-tight animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
                 Ready to Ignite Your
                 <span className="block mt-2">Cloud Journey?</span>
               </h2>

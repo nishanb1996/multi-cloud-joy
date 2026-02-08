@@ -35,7 +35,7 @@ export const PartnersSection = () => {
           <p className="text-sm text-muted-foreground font-medium uppercase tracking-widest mb-2">
             Trusted Partnerships
           </p>
-          <h2 className="text-2xl sm:text-3xl font-bold">
+          <h2 className="text-2xl sm:text-3xl font-display font-bold">
             Official Cloud <span className="gradient-text">Partners</span>
           </h2>
         </div>
