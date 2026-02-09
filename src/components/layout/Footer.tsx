@@ -8,9 +8,9 @@ const footerLinks = {
     { name: "Contact", path: "/contact" },
   ],
   services: [
-    { name: "Google Cloud Platform", path: "/services#gcp" },
-    { name: "Amazon Web Services", path: "/services#aws" },
-    { name: "Microsoft Azure", path: "/services#azure" },
+    { name: "Google Cloud Platform", path: "/services#cloud-services" },
+    { name: "Amazon Web Services", path: "/services#cloud-services" },
+    { name: "Microsoft Azure", path: "/services#cloud-services" },
     { name: "DevOps Solutions", path: "/services#devops" },
   ],
 };
