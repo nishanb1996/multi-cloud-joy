@@ -65,11 +65,8 @@ export const Navbar = () => {
             ))}
           </div>
 
-          {/* CTA Buttons */}
-          <div className="hidden md:flex items-center gap-3">
-            <Button asChild variant="ghost" className="font-medium">
-              <Link to="/signin">Sign In</Link>
-            </Button>
+          {/* CTA Button */}
+          <div className="hidden md:flex items-center">
             <Button asChild className="btn-gradient">
               <Link to="/contact">Get Started</Link>
             </Button>
@@ -104,11 +101,6 @@ export const Navbar = () => {
                 </Link>
               ))}
               <div className="flex flex-col gap-3 mt-4 pt-4 border-t border-border">
-                <Button asChild variant="outline" className="h-12">
-                  <Link to="/signin" onClick={() => setIsOpen(false)}>
-                    Sign In
-                  </Link>
-                </Button>
                 <Button asChild className="btn-gradient h-12">
                   <Link to="/contact" onClick={() => setIsOpen(false)}>
                     Get Started
