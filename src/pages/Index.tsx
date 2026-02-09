@@ -3,7 +3,9 @@ import {
   HeroSection,
   PartnersSection,
   ServicesSection,
+  ProcessSection,
   WhyChooseUsSection,
+  TechStackSection,
   TestimonialsSection,
   CTASection,
 } from "@/components/home";
@@ -14,7 +16,9 @@ const Index = () => {
       <HeroSection />
       <PartnersSection />
       <ServicesSection />
+      <ProcessSection />
       <WhyChooseUsSection />
+      <TechStackSection />
       <TestimonialsSection />
       <CTASection />
     </Layout>
