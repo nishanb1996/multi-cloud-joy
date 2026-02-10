@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CheckCircle, ArrowRight, Cpu, Database, Shield, Zap, Globe, BarChart3 } from "lucide-react";
@@ -130,7 +131,22 @@ const cloudProviders = [
   },
 ];
 
+const validTabs = ["aws", "azure", "gcp"];
+
 export const CloudServicesSection = () => {
+  const { hash } = useLocation();
+  const hashTab = hash.replace("#", "");
+  const initialTab = validTabs.includes(hashTab) ? hashTab : "aws";
+  const [activeTab, setActiveTab] = useState(initialTab);
+
+  useEffect(() => {
+    if (validTabs.includes(hashTab)) {
+      setActiveTab(hashTab);
+      const el = document.getElementById("cloud-services");
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, [hashTab]);
+
   return (
     <section id="cloud-services" className="section-padding">
       <div className="container-custom">
@@ -145,7 +161,7 @@ export const CloudServicesSection = () => {
           </p>
         </div>
 
-        <Tabs defaultValue="aws" className="w-full">
+        <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
           <TabsList className="w-full max-w-md mx-auto grid grid-cols-3 mb-8 sm:mb-12">
             {cloudProviders.map((provider) => (
               <TabsTrigger
