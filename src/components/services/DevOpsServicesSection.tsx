@@ -13,6 +13,25 @@ import {
   Workflow,
   Gauge,
 } from "lucide-react";
+import kubernetesLogo from "@/assets/logos/kubernetes.svg";
+import terraformLogo from "@/assets/logos/terraform.svg";
+import prometheusLogo from "@/assets/logos/prometheus.svg";
+import grafanaLogo from "@/assets/logos/grafana.svg";
+import jenkinsLogo from "@/assets/logos/jenkins.svg";
+import githubLogo from "@/assets/logos/github.svg";
+import dockerLogo from "@/assets/logos/docker.svg";
+import ansibleLogo from "@/assets/logos/ansible.svg";
+
+const toolLogos = [
+  { name: "Kubernetes", logo: kubernetesLogo },
+  { name: "Docker", logo: dockerLogo },
+  { name: "Terraform", logo: terraformLogo },
+  { name: "Jenkins", logo: jenkinsLogo },
+  { name: "GitHub Actions", logo: githubLogo },
+  { name: "Prometheus", logo: prometheusLogo },
+  { name: "Grafana", logo: grafanaLogo },
+  { name: "Ansible", logo: ansibleLogo },
+];
 
 const devopsServices = [
   {
@@ -193,6 +212,28 @@ export const DevOpsServicesSection = () => {
                     {step.description}
                   </p>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Tools We Use */}
+        <div className="mt-12 sm:mt-16 md:mt-20">
+          <p className="text-center text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-8">
+            Tools & Technologies We Use
+          </p>
+          <div className="grid grid-cols-4 sm:grid-cols-8 gap-4 sm:gap-6 max-w-4xl mx-auto">
+            {toolLogos.map((tool) => (
+              <div
+                key={tool.name}
+                className="flex flex-col items-center gap-2 group"
+              >
+                <div className="w-14 h-14 rounded-xl bg-background shadow-sm border border-border/50 flex items-center justify-center group-hover:shadow-md group-hover:scale-110 transition-all">
+                  <img src={tool.logo} alt={tool.name} className="w-8 h-8 object-contain" />
+                </div>
+                <span className="text-[10px] sm:text-xs text-muted-foreground text-center leading-tight">
+                  {tool.name}
+                </span>
               </div>
             ))}
           </div>
