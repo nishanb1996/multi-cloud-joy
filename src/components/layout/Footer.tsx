@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Cloud, Mail, Phone, MapPin, Linkedin, Twitter, Github, ArrowUpRight } from "lucide-react";
 
 const footerLinks = {
@@ -22,6 +22,9 @@ const socialLinks = [
 ];
 
 export const Footer = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+
   return (
     <footer className="bg-foreground text-background relative overflow-hidden">
       {/* Decorative elements */}
@@ -86,9 +89,23 @@ export const Footer = () => {
               <h4 className="font-display font-semibold text-lg mb-5">Services</h4>
               <ul className="space-y-3">
                 {footerLinks.services.map((link) => (
-                  <li key={link.path}>
+                  <li key={link.name}>
                     <Link
                       to={link.path}
+                      onClick={(e) => {
+                        const [pagePath, target] = link.path.split("#");
+                        if (target) {
+                          e.preventDefault();
+                          if (location.pathname === pagePath || location.pathname === pagePath + "/") {
+                            const el = document.getElementById(target);
+                            if (el) {
+                              el.scrollIntoView({ behavior: "smooth", block: "start" });
+                            }
+                          } else {
+                            navigate(link.path);
+                          }
+                        }
+                      }}
                       className="text-sm text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-1 group"
                     >
                       {link.name}

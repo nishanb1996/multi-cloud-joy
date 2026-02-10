@@ -1,12 +1,12 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 
 export const ScrollToHash = () => {
-  const { hash, pathname } = useLocation();
+  const { hash, pathname, key } = useLocation();
+  const prevKey = useRef(key);
 
   useEffect(() => {
     if (hash) {
-      // Small delay to ensure the DOM is ready after route change
       const timer = setTimeout(() => {
         const element = document.querySelector(hash);
         if (element) {
@@ -17,7 +17,8 @@ export const ScrollToHash = () => {
     } else {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
-  }, [hash, pathname]);
+    prevKey.current = key;
+  }, [hash, pathname, key]);
 
   return null;
 };
