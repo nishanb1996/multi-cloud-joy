@@ -1,43 +1,21 @@
-import { 
-  Container, 
-  GitBranch, 
-  Monitor, 
-  Lock, 
-  Database, 
-  Workflow 
-} from "lucide-react";
+import kubernetesLogo from "@/assets/logos/kubernetes.svg";
+import terraformLogo from "@/assets/logos/terraform.svg";
+import prometheusLogo from "@/assets/logos/prometheus.svg";
+import grafanaLogo from "@/assets/logos/grafana.svg";
+import jenkinsLogo from "@/assets/logos/jenkins.svg";
+import githubLogo from "@/assets/logos/github.svg";
+import dockerLogo from "@/assets/logos/docker.svg";
+import ansibleLogo from "@/assets/logos/ansible.svg";
 
 const technologies = [
-  {
-    icon: Container,
-    name: "Kubernetes",
-    category: "Container Orchestration",
-  },
-  {
-    icon: GitBranch,
-    name: "Terraform",
-    category: "Infrastructure as Code",
-  },
-  {
-    icon: Monitor,
-    name: "Prometheus & Grafana",
-    category: "Monitoring & Observability",
-  },
-  {
-    icon: Lock,
-    name: "Vault & IAM",
-    category: "Security & Compliance",
-  },
-  {
-    icon: Database,
-    name: "Cloud SQL & DynamoDB",
-    category: "Managed Databases",
-  },
-  {
-    icon: Workflow,
-    name: "Jenkins & GitHub Actions",
-    category: "CI/CD Pipelines",
-  },
+  { logo: kubernetesLogo, name: "Kubernetes", category: "Container Orchestration" },
+  { logo: terraformLogo, name: "Terraform", category: "Infrastructure as Code" },
+  { logo: prometheusLogo, name: "Prometheus", category: "Monitoring" },
+  { logo: grafanaLogo, name: "Grafana", category: "Observability" },
+  { logo: dockerLogo, name: "Docker", category: "Containerization" },
+  { logo: jenkinsLogo, name: "Jenkins", category: "CI/CD Pipelines" },
+  { logo: githubLogo, name: "GitHub Actions", category: "CI/CD Automation" },
+  { logo: ansibleLogo, name: "Ansible", category: "Configuration Management" },
 ];
 
 export const TechStackSection = () => {
@@ -49,7 +27,6 @@ export const TechStackSection = () => {
       </div>
 
       <div className="container-custom relative">
-        {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16 px-4">
           <p className="text-primary font-semibold mb-3 text-sm uppercase tracking-widest">
             Technology Stack
@@ -63,15 +40,14 @@ export const TechStackSection = () => {
           </p>
         </div>
 
-        {/* Tech Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto stagger-children">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 max-w-4xl mx-auto stagger-children">
           {technologies.map((tech) => (
             <div
               key={tech.name}
               className="group card-premium p-5 sm:p-6 text-center card-hover"
             >
-              <div className="w-12 h-12 mx-auto mb-4 rounded-xl bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center group-hover:from-primary/20 group-hover:to-secondary/20 transition-colors duration-300">
-                <tech.icon className="w-6 h-6 text-primary" />
+              <div className="w-14 h-14 mx-auto mb-4 flex items-center justify-center">
+                <img src={tech.logo} alt={tech.name} className="w-10 h-10 object-contain" />
               </div>
               <h3 className="font-display font-semibold text-sm sm:text-base mb-1">
                 {tech.name}
