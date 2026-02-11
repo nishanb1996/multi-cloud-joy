@@ -17,21 +17,40 @@ export const Navbar = () => {
 
   const isActive = (path: string) => location.pathname === path;
 
+  // Close menu on route change
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location.pathname, location.hash]);
+
+  // Handle scroll
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Lock body scroll when menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
+  const navBg = isOpen
+    ? "bg-background shadow-lg border-b border-border/50"
+    : isScrolled
+      ? "bg-background/95 backdrop-blur-xl shadow-lg border-b border-border/50"
+      : "bg-transparent";
+
   return (
-    <nav className={`fixed top-0 z-50 w-full transition-all duration-300 ${
-      isScrolled 
-        ? "bg-background/95 backdrop-blur-xl shadow-lg border-b border-border/50" 
-        : "bg-transparent"
-    }`}>
+    <nav className={`fixed top-0 z-50 w-full transition-all duration-300 ${navBg}`}>
       <div className="container-custom">
         <div className="flex h-16 sm:h-20 items-center justify-between">
           {/* Logo */}
@@ -59,7 +78,7 @@ export const Navbar = () => {
               >
                 {link.name}
                 <span className={`absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full transition-transform duration-300 origin-left ${
-                  isActive(link.path) ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+                  isActive(link.path) ? "scale-x-100" : "scale-x-0"
                 }`} />
               </Link>
             ))}
@@ -74,43 +93,43 @@ export const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-foreground rounded-xl hover:bg-muted transition-colors"
+            className="md:hidden p-2 text-foreground rounded-xl hover:bg-muted transition-colors relative z-50"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
+      </div>
 
-        {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="md:hidden fixed top-16 left-0 right-0 bottom-0 bg-background border-b border-border shadow-2xl animate-fade-in z-50 overflow-y-auto">
-            <div className="container-custom py-6 flex flex-col gap-2">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  onClick={() => setIsOpen(false)}
-                  className={`text-base font-medium py-3 px-4 rounded-xl transition-all duration-300 ${
-                    isActive(link.path)
-                      ? "text-primary bg-primary/10"
-                      : "text-muted-foreground hover:text-primary hover:bg-muted"
-                  }`}
-                >
-                  {link.name}
+      {/* Mobile Navigation - Full screen overlay */}
+      {isOpen && (
+        <div className="md:hidden fixed inset-0 top-16 sm:top-20 bg-background z-40 overflow-y-auto">
+          <div className="container-custom py-8 flex flex-col gap-2">
+            {navLinks.map((link) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                onClick={() => setIsOpen(false)}
+                className={`text-base font-medium py-3 px-4 rounded-xl transition-all duration-300 ${
+                  isActive(link.path)
+                    ? "text-primary bg-primary/10"
+                    : "text-muted-foreground hover:text-primary hover:bg-muted"
+                }`}
+              >
+                {link.name}
+              </Link>
+            ))}
+            <div className="flex flex-col gap-3 mt-6 pt-6 border-t border-border">
+              <Button asChild className="btn-gradient h-12">
+                <Link to="/contact" onClick={() => setIsOpen(false)}>
+                  Get Started
                 </Link>
-              ))}
-              <div className="flex flex-col gap-3 mt-4 pt-4 border-t border-border">
-                <Button asChild className="btn-gradient h-12">
-                  <Link to="/contact" onClick={() => setIsOpen(false)}>
-                    Get Started
-                  </Link>
-                </Button>
-              </div>
+              </Button>
             </div>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </nav>
   );
 };
