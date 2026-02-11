@@ -84,7 +84,7 @@ export const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-background/98 backdrop-blur-xl border-b border-border shadow-2xl animate-fade-in">
+          <div className="md:hidden fixed top-16 left-0 right-0 bottom-0 bg-background/98 backdrop-blur-xl border-b border-border shadow-2xl animate-fade-in z-50">
             <div className="container-custom py-6 flex flex-col gap-2">
               {navLinks.map((link) => (
                 <Link

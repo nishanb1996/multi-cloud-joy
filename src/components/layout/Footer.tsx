@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Cloud, Mail, Phone, MapPin, Linkedin, Twitter, Github, ArrowUpRight } from "lucide-react";
 
 const footerLinks = {
@@ -22,6 +22,13 @@ const socialLinks = [
 ];
 
 export const Footer = () => {
+  const navigate = useNavigate();
+
+  const handleServiceClick = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
+    e.preventDefault();
+    navigate(path);
+  };
+
   return (
     <footer className="bg-foreground text-background relative overflow-hidden">
       {/* Decorative elements */}
@@ -89,7 +96,8 @@ export const Footer = () => {
                   <li key={link.name}>
                     <a
                       href={link.path}
-                      className="text-sm text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-1 group"
+                      onClick={(e) => handleServiceClick(e, link.path)}
+                      className="text-sm text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-1 group cursor-pointer"
                     >
                       {link.name}
                       <ArrowUpRight className="h-3 w-3 opacity-0 -translate-y-1 translate-x-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all" />
