@@ -31,18 +31,6 @@ export const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Lock body scroll when menu is open
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [isOpen]);
-
   const navBg = isOpen
     ? "bg-background shadow-lg border-b border-border/50"
     : isScrolled
@@ -93,43 +81,43 @@ export const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-foreground rounded-xl hover:bg-muted transition-colors relative z-50"
+            className="md:hidden p-2 text-foreground rounded-xl hover:bg-muted transition-colors"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
-      </div>
 
-      {/* Mobile Navigation - Full screen overlay */}
-      {isOpen && (
-        <div className="md:hidden fixed inset-0 top-16 sm:top-20 bg-background z-40 overflow-y-auto">
-          <div className="container-custom py-8 flex flex-col gap-2">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                onClick={() => setIsOpen(false)}
-                className={`text-base font-medium py-3 px-4 rounded-xl transition-all duration-300 ${
-                  isActive(link.path)
-                    ? "text-primary bg-primary/10"
-                    : "text-muted-foreground hover:text-primary hover:bg-muted"
-                }`}
-              >
-                {link.name}
-              </Link>
-            ))}
-            <div className="flex flex-col gap-3 mt-6 pt-6 border-t border-border">
-              <Button asChild className="btn-gradient h-12">
-                <Link to="/contact" onClick={() => setIsOpen(false)}>
-                  Get Started
+        {/* Mobile Navigation - Dropdown panel */}
+        {isOpen && (
+          <div className="md:hidden absolute top-full left-0 right-0 bg-background border-b border-border shadow-xl z-50 animate-fade-in">
+            <div className="container-custom py-4 flex flex-col gap-1">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  onClick={() => setIsOpen(false)}
+                  className={`text-base font-medium py-3 px-4 border-b border-border/30 transition-all duration-300 ${
+                    isActive(link.path)
+                      ? "text-primary"
+                      : "text-foreground hover:text-primary"
+                  }`}
+                >
+                  {link.name}
                 </Link>
-              </Button>
+              ))}
+              <div className="flex flex-col gap-3 mt-3 pt-3">
+                <Button asChild className="btn-gradient h-12">
+                  <Link to="/contact" onClick={() => setIsOpen(false)}>
+                    Get Started
+                  </Link>
+                </Button>
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </nav>
   );
 };
