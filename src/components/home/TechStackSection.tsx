@@ -6,6 +6,9 @@ import jenkinsLogo from "@/assets/logos/jenkins.svg";
 import githubLogo from "@/assets/logos/github.svg";
 import dockerLogo from "@/assets/logos/docker.svg";
 import ansibleLogo from "@/assets/logos/ansible.svg";
+import mlopsLogo from "@/assets/logos/mlops.svg";
+import llmopsLogo from "@/assets/logos/llmops.svg";
+import aiopsLogo from "@/assets/logos/aiops.svg";
 
 const technologies = [
   { logo: kubernetesLogo, name: "Kubernetes", category: "Container Orchestration" },
@@ -16,6 +19,9 @@ const technologies = [
   { logo: jenkinsLogo, name: "Jenkins", category: "CI/CD Pipelines" },
   { logo: githubLogo, name: "GitHub Actions", category: "CI/CD Automation" },
   { logo: ansibleLogo, name: "Ansible", category: "Configuration Management" },
+  { logo: mlopsLogo, name: "MLOps", category: "ML Lifecycle Management" },
+  { logo: llmopsLogo, name: "LLMOps", category: "LLM Deployment & Ops" },
+  { logo: aiopsLogo, name: "AIOps", category: "AI-Driven Operations" },
 ];
 
 export const TechStackSection = () => {

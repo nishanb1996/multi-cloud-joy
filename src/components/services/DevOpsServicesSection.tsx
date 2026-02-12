@@ -21,6 +21,9 @@ import jenkinsLogo from "@/assets/logos/jenkins.svg";
 import githubLogo from "@/assets/logos/github.svg";
 import dockerLogo from "@/assets/logos/docker.svg";
 import ansibleLogo from "@/assets/logos/ansible.svg";
+import mlopsLogo from "@/assets/logos/mlops.svg";
+import llmopsLogo from "@/assets/logos/llmops.svg";
+import aiopsLogo from "@/assets/logos/aiops.svg";
 
 const toolLogos = [
   { name: "Kubernetes", logo: kubernetesLogo },
@@ -31,6 +34,9 @@ const toolLogos = [
   { name: "Prometheus", logo: prometheusLogo },
   { name: "Grafana", logo: grafanaLogo },
   { name: "Ansible", logo: ansibleLogo },
+  { name: "MLOps", logo: mlopsLogo },
+  { name: "LLMOps", logo: llmopsLogo },
+  { name: "AIOps", logo: aiopsLogo },
 ];
 
 const devopsServices = [
