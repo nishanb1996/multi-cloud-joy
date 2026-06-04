@@ -11,99 +11,167 @@ import {
   ArrowRight,
   Bot,
   LineChart,
+  Workflow,
+  ShieldCheck,
+  Zap,
 } from "lucide-react";
 
 const aiServices = [
   {
-    icon: Brain,
-    title: "Generative AI & LLM Integration",
-    description: "Integrate state-of-the-art large language models into your products and workflows.",
+    icon: Bot,
+    title: "Agentic AI & Autonomous Workflows",
+    description:
+      "Deploy goal-driven AI agents that plan, reason, and execute multi-step tasks across your tools and APIs.",
     details: [
-      "OpenAI, Anthropic, Gemini APIs",
-      "Custom GPT & assistant development",
-      "Prompt engineering & fine-tuning",
-      "Multi-model orchestration",
+      "LangGraph, CrewAI, AutoGen frameworks",
+      "Tool calling & function execution",
+      "Multi-agent orchestration",
+      "Human-in-the-loop guardrails",
     ],
     gradient: "from-violet-500/10 to-fuchsia-500/10",
   },
   {
-    icon: Database,
-    title: "RAG & Vector Search",
-    description: "Build retrieval-augmented systems that ground AI responses in your private data.",
+    icon: Brain,
+    title: "Generative AI & LLM Engineering",
+    description:
+      "Integrate frontier models — GPT-5, Claude, Gemini 2.5 — with prompt engineering, evals, and fine-tuning.",
     details: [
-      "Pinecone, Weaviate, pgvector",
-      "Document ingestion pipelines",
-      "Semantic search & embeddings",
-      "Knowledge base chatbots",
+      "OpenAI, Anthropic, Google, Mistral APIs",
+      "Custom GPTs & assistant APIs",
+      "LoRA / QLoRA fine-tuning",
+      "Prompt evals & observability",
     ],
     gradient: "from-blue-500/10 to-cyan-500/10",
   },
   {
-    icon: MessageSquare,
-    title: "AI Chatbots & Agents",
-    description: "Deploy intelligent conversational agents that automate support and operations.",
+    icon: Database,
+    title: "RAG 2.0 & Vector Search",
+    description:
+      "Build retrieval-augmented systems with hybrid search, reranking, and graph-aware context.",
     details: [
-      "Multi-channel chatbots",
-      "Autonomous AI agents",
-      "Tool calling & workflows",
-      "Voice & text interfaces",
+      "Pinecone, Weaviate, Qdrant, pgvector",
+      "Hybrid BM25 + semantic retrieval",
+      "GraphRAG & knowledge graphs",
+      "Document ingestion pipelines",
     ],
     gradient: "from-emerald-500/10 to-teal-500/10",
   },
   {
-    icon: Cpu,
-    title: "MLOps & Model Deployment",
-    description: "Operationalize machine learning with scalable training and serving infrastructure.",
+    icon: MessageSquare,
+    title: "AI Chatbots & Copilots",
+    description:
+      "Ship conversational copilots for support, sales, and internal ops — across web, voice, and Slack.",
     details: [
-      "SageMaker, Vertex AI, Azure ML",
-      "Model versioning & registry",
-      "Automated training pipelines",
-      "Real-time & batch inference",
+      "Multi-channel & multilingual",
+      "Voice agents (Whisper, ElevenLabs)",
+      "CRM & Helpdesk integrations",
+      "Streaming, citations & memory",
     ],
     gradient: "from-orange-500/10 to-amber-500/10",
   },
   {
-    icon: Eye,
-    title: "Computer Vision",
-    description: "Extract insights from images and video with custom vision models.",
+    icon: Cpu,
+    title: "MLOps & LLMOps",
+    description:
+      "Operationalize ML and LLMs with scalable training, evaluation, and inference infrastructure.",
     details: [
-      "Object detection & OCR",
-      "Image classification",
-      "Video analytics",
-      "Edge deployment",
+      "SageMaker, Vertex AI, Azure ML, Bedrock",
+      "Model registry & versioning",
+      "GPU autoscaling & quantization",
+      "Drift detection & evals",
     ],
     gradient: "from-pink-500/10 to-rose-500/10",
   },
   {
-    icon: LineChart,
-    title: "Predictive Analytics & Data Science",
-    description: "Turn raw data into forecasts and intelligent decisions that drive business value.",
+    icon: Eye,
+    title: "Multimodal & Computer Vision",
+    description:
+      "Process images, video, and audio with vision-language models and custom CV pipelines.",
     details: [
-      "Forecasting & recommendation",
-      "Anomaly detection",
-      "Customer segmentation",
-      "Business intelligence dashboards",
+      "VLMs (GPT-4o, Gemini, Claude vision)",
+      "Object detection, OCR & segmentation",
+      "Video analytics & summarization",
+      "Edge & on-device deployment",
     ],
     gradient: "from-indigo-500/10 to-blue-500/10",
+  },
+  {
+    icon: LineChart,
+    title: "Predictive Analytics & Forecasting",
+    description:
+      "Turn data into forecasts, recommendations, and decisions that move business metrics.",
+    details: [
+      "Demand & revenue forecasting",
+      "Anomaly & fraud detection",
+      "Recommendation engines",
+      "Customer segmentation & churn",
+    ],
+    gradient: "from-cyan-500/10 to-sky-500/10",
+  },
+  {
+    icon: Workflow,
+    title: "AI Workflow Automation",
+    description:
+      "Automate document, email, and back-office workflows with AI-native pipelines.",
+    details: [
+      "Document understanding & IDP",
+      "n8n, Zapier, Make AI workflows",
+      "Email triage & summarization",
+      "Approval & routing agents",
+    ],
+    gradient: "from-lime-500/10 to-emerald-500/10",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Responsible AI & Governance",
+    description:
+      "Ship AI you can trust — with security, evals, red-teaming, and compliance built-in.",
+    details: [
+      "PII redaction & data isolation",
+      "Prompt injection defense",
+      "Bias, safety & hallucination evals",
+      "EU AI Act & SOC 2 readiness",
+    ],
+    gradient: "from-amber-500/10 to-yellow-500/10",
   },
 ];
 
 export const AIServicesSection = () => {
   return (
-    <section id="ai-services" className="section-padding">
+    <section id="ai-services" className="section-padding bg-gradient-to-b from-background via-muted/20 to-background">
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12 md:mb-16 px-4">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
             <Sparkles className="w-4 h-4" />
-            AI & Machine Learning
+            AI, GenAI & Machine Learning
           </div>
           <h2 className="text-responsive-lg font-display font-bold mb-4">
-            Build Intelligent, AI-Powered Products
+            Build <span className="gradient-text">Production-Grade AI</span> on Your Cloud
           </h2>
           <p className="text-muted-foreground text-sm sm:text-base md:text-lg">
-            From generative AI to MLOps, we help you harness artificial intelligence
-            to automate workflows, unlock insights, and deliver next-generation experiences.
+            From agentic workflows and RAG to MLOps and Responsible AI — we help you
+            move beyond prototypes and ship AI that's secure, scalable, and measurable.
           </p>
+
+          <div className="flex flex-wrap justify-center gap-2 mt-6">
+            {[
+              "Agentic AI",
+              "GPT-5 / Claude / Gemini",
+              "RAG 2.0",
+              "LLMOps",
+              "Vector DBs",
+              "Fine-tuning",
+              "Multimodal",
+              "Responsible AI",
+            ].map((tag) => (
+              <span
+                key={tag}
+                className="text-xs px-3 py-1 rounded-full border border-border bg-background/60 text-muted-foreground"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-12">
@@ -126,7 +194,7 @@ export const AIServicesSection = () => {
                   <ul className="space-y-2">
                     {service.details.map((detail) => (
                       <li key={detail} className="text-xs sm:text-sm flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
                         {detail}
                       </li>
                     ))}
@@ -134,6 +202,40 @@ export const AIServicesSection = () => {
                 </div>
               </CardContent>
             </Card>
+          ))}
+        </div>
+
+        {/* Trending use cases strip */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
+          {[
+            {
+              icon: Zap,
+              title: "AI-Powered SaaS",
+              copy: "Embed copilots, smart search, and automations into your product.",
+            },
+            {
+              icon: Bot,
+              title: "Enterprise AI Assistants",
+              copy: "Private ChatGPT-style assistants grounded in your internal data.",
+            },
+            {
+              icon: Workflow,
+              title: "Process Automation",
+              copy: "Replace manual back-office work with agentic AI pipelines.",
+            },
+          ].map((item) => (
+            <div
+              key={item.title}
+              className="rounded-xl border border-border bg-card/50 p-5 flex gap-4 items-start hover:border-primary/40 transition-colors"
+            >
+              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                <item.icon className="w-5 h-5 text-primary" />
+              </div>
+              <div>
+                <h4 className="font-semibold text-sm sm:text-base mb-1">{item.title}</h4>
+                <p className="text-xs sm:text-sm text-muted-foreground">{item.copy}</p>
+              </div>
+            </div>
           ))}
         </div>
 

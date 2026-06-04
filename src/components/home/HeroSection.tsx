@@ -29,7 +29,7 @@ export const HeroSection = () => {
           <div className="space-y-8 text-center lg:text-left">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold animate-fade-in border border-primary/20">
               <Cloud className="h-4 w-4" />
-              Multi-Cloud & DevOps Experts
+              Cloud · DevOps · AI Experts
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
             </div>
 
@@ -39,9 +39,9 @@ export const HeroSection = () => {
             </h1>
 
             <p className="text-lg sm:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-              Transform your infrastructure with enterprise-grade cloud solutions
-              across GCP, AWS, and Azure. We bring DevOps excellence to every
-              deployment.
+              Transform your infrastructure with enterprise-grade cloud, DevOps,
+              and AI solutions across GCP, AWS, and Azure — from CI/CD pipelines
+              to agentic AI and production-ready LLM apps.
             </p>
 
             <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center lg:justify-start animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
