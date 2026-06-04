@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { GitBranch, ArrowRight } from "lucide-react";
+import { GitBranch, ArrowRight, Sparkles } from "lucide-react";
 import { GCPLogo, AWSLogo, AzureLogo } from "@/components/logos";
 
 const services = [
@@ -32,6 +32,13 @@ const services = [
     description: "Accelerate delivery with CI/CD pipelines, Infrastructure as Code, container orchestration, and monitoring.",
     bgColor: "bg-gradient-to-br from-violet-50 to-purple-100/50 dark:from-violet-950/40 dark:to-violet-900/20",
     borderColor: "border-violet-200/50 dark:border-violet-800/30",
+  },
+  {
+    icon: Sparkles,
+    title: "AI & GenAI Solutions",
+    description: "Build agentic AI, RAG copilots, and MLOps pipelines with GPT-5, Claude, and Gemini on your cloud.",
+    bgColor: "bg-gradient-to-br from-fuchsia-50 to-pink-100/50 dark:from-fuchsia-950/40 dark:to-pink-900/20",
+    borderColor: "border-fuchsia-200/50 dark:border-fuchsia-800/30",
   },
 ];
 
@@ -69,7 +76,7 @@ export const ServicesSection = () => {
                   {service.Logo ? (
                     <service.Logo className="w-full h-full" />
                   ) : service.icon ? (
-                    <service.icon className="w-8 h-8 text-violet-600" />
+                    <service.icon className="w-8 h-8 text-primary" />
                   ) : null}
                 </div>
                 <CardTitle className="text-xl font-display font-bold">{service.title}</CardTitle>
