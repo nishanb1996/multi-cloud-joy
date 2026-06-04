@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Cloud, Cog } from "lucide-react";
-import { CloudServicesSection, DevOpsServicesSection } from "@/components/services";
+import { ArrowRight, Cloud, Cog, Sparkles } from "lucide-react";
+import { CloudServicesSection, DevOpsServicesSection, AIServicesSection } from "@/components/services";
 
 const Services = () => {
   return (
@@ -19,17 +19,18 @@ const Services = () => {
           <div className="max-w-4xl mx-auto text-center px-4">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
               <Cloud className="w-4 h-4" />
-              Enterprise Cloud & DevOps Solutions
+              Cloud, DevOps & AI Solutions
             </div>
             <h1 className="text-responsive-xl font-display font-bold mb-6">
               Transform Your Business with
-              <span className="gradient-text block">Cloud & DevOps Excellence</span>
+              <span className="gradient-text block">Cloud, DevOps & AI Excellence</span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-              From cloud migration to DevOps automation, we provide end-to-end solutions 
-              that help you build faster, scale smarter, and operate with confidence.
+              From cloud migration and DevOps automation to AI-powered intelligence,
+              we deliver end-to-end solutions that help you build faster, scale smarter,
+              and innovate with confidence.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center">
               <Button asChild size="lg" className="btn-gradient">
                 <a href="#cloud-services">
                   <Cloud className="mr-2 h-5 w-5" />
@@ -42,6 +43,12 @@ const Services = () => {
                   DevOps Solutions
                 </a>
               </Button>
+              <Button asChild size="lg" variant="outline">
+                <a href="#ai-services">
+                  <Sparkles className="mr-2 h-5 w-5" />
+                  AI Solutions
+                </a>
+              </Button>
             </div>
           </div>
         </div>
@@ -52,6 +59,9 @@ const Services = () => {
 
       {/* DevOps Services Section */}
       <DevOpsServicesSection />
+
+      {/* AI Services Section */}
+      <AIServicesSection />
 
       {/* CTA Section */}
       <section className="section-padding">
