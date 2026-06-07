@@ -6,8 +6,8 @@ declare global {
 }
 
 export interface ContactFormPayload {
-  name: string;
-  email: string;
+  name?: string;
+  email?: string;
   company?: string;
   phone?: string;
   service?: string;
