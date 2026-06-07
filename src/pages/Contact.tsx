@@ -15,6 +15,7 @@ import {
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin, Send, Linkedin, Twitter, Github, Clock } from "lucide-react";
 import { z } from "zod";
+import { emailService } from "@/lib/emailService";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
@@ -77,7 +78,12 @@ const Contact = () => {
 
     try {
       const validatedData = contactSchema.parse(formData);
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+
+      const result = await emailService.sendContactForm(validatedData);
+
+      if (!result.success) {
+        throw new Error("Failed to send email");
+      }
 
       toast({
         title: "Message Sent!",
