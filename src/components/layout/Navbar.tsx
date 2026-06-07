@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Cloud } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logoAsset from "@/assets/cloudignitia-logo.jpg.asset.json";
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -43,10 +44,11 @@ export const Navbar = () => {
         <div className="flex h-16 sm:h-20 items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
-            <div className="relative">
-              <Cloud className="h-7 w-7 sm:h-9 sm:w-9 text-primary transition-transform group-hover:scale-110 duration-300" />
-              <div className="absolute -bottom-0.5 -right-0.5 h-2.5 w-2.5 sm:h-3 sm:w-3 rounded-full bg-secondary animate-pulse" />
-            </div>
+            <img
+              src={logoAsset.url}
+              alt="Cloudignitia logo"
+              className="h-9 w-9 sm:h-11 sm:w-11 object-contain transition-transform group-hover:scale-110 duration-300"
+            />
             <span className="text-xl sm:text-2xl font-display font-bold gradient-text">
               Cloudignitia
             </span>
