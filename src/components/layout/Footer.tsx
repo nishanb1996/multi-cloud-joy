@@ -46,7 +46,7 @@ export const Footer = () => {
             <div className="space-y-6 sm:col-span-2 lg:col-span-1">
               <Link to="/" className="flex items-center gap-2 group">
                 <img
-                  src={logoAsset.url}
+                  src={logoSrc}
                   alt="Cloudignitia logo"
                   className="h-10 w-10 object-contain transition-transform group-hover:scale-110"
                 />
