@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Cloud, Server, Database, ArrowRight, Shield, Zap } from "lucide-react";
+import { Cloud, ArrowRight } from "lucide-react";
+import { Hero3DScene } from "./Hero3DScene";
 
 export const HeroSection = () => {
   return (
@@ -73,42 +74,18 @@ export const HeroSection = () => {
             </div>
           </div>
 
-          {/* Illustration */}
-          <div className="relative h-[400px] sm:h-[450px] lg:h-[600px] animate-fade-in order-first lg:order-last" style={{ animationDelay: "0.2s" }}>
-            <div className="relative w-full h-full flex items-center justify-center">
-              {/* Rotating Ring */}
-              <div className="absolute w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] md:w-[380px] md:h-[380px] lg:w-[420px] lg:h-[420px] rounded-full border-2 border-dashed border-primary/20 animate-spin-slow" />
-              
-              {/* Main Cloud */}
-              <div className="relative">
-                <div className="w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full bg-gradient-to-br from-primary/20 via-primary/10 to-secondary/20 flex items-center justify-center animate-float glow-primary">
-                  <div className="w-40 h-40 sm:w-48 sm:h-48 md:w-52 md:h-52 lg:w-56 lg:h-56 rounded-full bg-gradient-to-br from-card to-muted/50 flex items-center justify-center shadow-2xl border border-border/50">
-                    <Cloud className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 text-primary" />
-                  </div>
-                </div>
-
-                {/* Floating Elements */}
-                <div className="absolute -top-4 -left-4 sm:-top-6 sm:-left-6 w-16 h-16 sm:w-20 sm:h-20 rounded-2xl glass shadow-xl flex items-center justify-center animate-float" style={{ animationDelay: "0.5s" }}>
-                  <Server className="w-8 h-8 sm:w-10 sm:h-10 text-secondary" />
-                </div>
-
-                <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 w-16 h-16 sm:w-20 sm:h-20 rounded-2xl glass shadow-xl flex items-center justify-center animate-float" style={{ animationDelay: "1s" }}>
-                  <Database className="w-8 h-8 sm:w-10 sm:h-10 text-primary" />
-                </div>
-
-                <div className="absolute top-1/2 -right-8 sm:-right-12 w-14 h-14 sm:w-16 sm:h-16 rounded-2xl glass shadow-xl flex items-center justify-center animate-float" style={{ animationDelay: "1.5s" }}>
-                  <Shield className="w-7 h-7 sm:w-8 sm:h-8 text-primary" />
-                </div>
-
-                <div className="absolute -top-8 right-1/4 w-12 h-12 sm:w-14 sm:h-14 rounded-2xl glass shadow-xl flex items-center justify-center animate-float" style={{ animationDelay: "2s" }}>
-                  <Zap className="w-6 h-6 sm:w-7 sm:h-7 text-secondary" />
-                </div>
-
-                {/* Decorative dots */}
-                <div className="absolute top-0 right-0 w-4 h-4 rounded-full bg-primary animate-pulse" />
-                <div className="absolute bottom-1/4 -left-8 w-3 h-3 rounded-full bg-secondary animate-pulse" style={{ animationDelay: "0.5s" }} />
-                <div className="absolute -bottom-8 left-1/3 w-2 h-2 rounded-full bg-primary animate-pulse" style={{ animationDelay: "1s" }} />
+          {/* 3D Scene */}
+          <div className="relative h-[400px] sm:h-[480px] lg:h-[600px] animate-fade-in order-first lg:order-last" style={{ animationDelay: "0.2s" }}>
+            <div className="relative w-full h-full">
+              {/* Glow backdrop */}
+              <div className="absolute inset-8 rounded-full bg-gradient-to-br from-primary/20 via-secondary/10 to-transparent blur-3xl" />
+              {/* Glass frame */}
+              <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden glass border border-white/10 shadow-2xl">
+                <Hero3DScene />
               </div>
+              {/* Corner accent dots */}
+              <div className="absolute top-4 right-4 w-2.5 h-2.5 rounded-full bg-primary animate-pulse z-10" />
+              <div className="absolute bottom-4 left-4 w-2 h-2 rounded-full bg-secondary animate-pulse z-10" style={{ animationDelay: "0.6s" }} />
             </div>
           </div>
         </div>
