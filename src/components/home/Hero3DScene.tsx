@@ -51,16 +51,17 @@ function OrbitNode({ item }: { item: (typeof ORBIT_ITEMS)[number] }) {
 }
 
 function OrbitRing({ radius, tilt = 0 }: { radius: number; tilt?: number }) {
-  const geometry = useMemo(() => {
+  const lineObj = useMemo(() => {
     const curve = new THREE.EllipseCurve(0, 0, radius, radius, 0, Math.PI * 2, false, 0);
     const points = curve.getPoints(128).map((p) => new THREE.Vector3(p.x, 0, p.y));
-    return new THREE.BufferGeometry().setFromPoints(points);
+    const geometry = new THREE.BufferGeometry().setFromPoints(points);
+    const material = new THREE.LineBasicMaterial({ color: "#10B981", transparent: true, opacity: 0.22 });
+    return new THREE.LineLoop(geometry, material);
   }, [radius]);
   return (
-    <line rotation={[tilt, 0, 0]}>
-      <primitive object={geometry} attach="geometry" />
-      <lineBasicMaterial color="#10B981" transparent opacity={0.18} />
-    </line>
+    <group rotation={[tilt, 0, 0]}>
+      <primitive object={lineObj} />
+    </group>
   );
 }
 
