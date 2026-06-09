@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github, ArrowUpRight } from "lucide-react";
-import logoAsset from "@/assets/cloudignitia-logo.jpg.asset.json";
+const logoSrc = "/cloudignitia-logo.jpg";
 
 const footerLinks = {
   company: [
