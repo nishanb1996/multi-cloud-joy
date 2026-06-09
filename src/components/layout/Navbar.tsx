@@ -45,7 +45,7 @@ export const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
             <img
-              src={logoAsset.url}
+              src={logoSrc}
               alt="Cloudignitia logo"
               className="h-9 w-9 sm:h-11 sm:w-11 object-contain transition-transform group-hover:scale-110 duration-300"
             />
