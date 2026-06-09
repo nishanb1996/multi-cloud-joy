@@ -24,6 +24,10 @@ export const HeroSection = () => {
         />
       </div>
 
+      {/* 3D Background */}
+      <HeroBackground3D />
+
+
       <div className="container-custom relative py-20 lg:py-0">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content */}
