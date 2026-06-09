@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Cloud, Server, Database, ArrowRight, Shield, Zap } from "lucide-react";
+import { HeroBackground3D } from "@/components/three/HeroBackground3D";
 
 export const HeroSection = () => {
   return (
