@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoAsset from "@/assets/cloudignitia-logo.jpg.asset.json";
+const logoSrc = "/cloudignitia-logo.jpg";
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -45,7 +45,7 @@ export const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
             <img
-              src={logoAsset.url}
+              src={logoSrc}
               alt="Cloudignitia logo"
               className="h-9 w-9 sm:h-11 sm:w-11 object-contain transition-transform group-hover:scale-110 duration-300"
             />
