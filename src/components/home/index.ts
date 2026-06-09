@@ -6,4 +6,3 @@ export { TestimonialsSection } from "./TestimonialsSection";
 export { ProcessSection } from "./ProcessSection";
 export { TechStackSection } from "./TechStackSection";
 export { CTASection } from "./CTASection";
-export { Hero3DScene } from "./Hero3DScene";

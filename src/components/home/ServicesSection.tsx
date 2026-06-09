@@ -67,29 +67,26 @@ export const ServicesSection = () => {
         {/* Services Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 stagger-children">
           {services.map((service) => (
-            <div key={service.title} className="group relative">
-              {/* Gradient border on hover */}
-              <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-primary/40 via-secondary/30 to-primary/40 opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-500" />
-              <Card
-                className={`relative card-hover border-2 ${service.borderColor} ${service.bgColor} shadow-lg overflow-hidden h-full backdrop-blur-sm`}
-              >
-                <CardHeader className="p-6 pb-4">
-                  <div className="w-16 h-16 rounded-2xl bg-white dark:bg-card shadow-md flex items-center justify-center mb-5 p-3 group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-500 ring-1 ring-border/40">
-                    {service.Logo ? (
-                      <service.Logo className="w-full h-full" />
-                    ) : service.icon ? (
-                      <service.icon className="w-8 h-8 text-primary" />
-                    ) : null}
-                  </div>
-                  <CardTitle className="text-xl font-display font-bold">{service.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="p-6 pt-0">
-                  <CardDescription className="text-sm leading-relaxed text-muted-foreground">
-                    {service.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            </div>
+            <Card
+              key={service.title}
+              className={`card-hover border-2 ${service.borderColor} ${service.bgColor} shadow-lg overflow-hidden group`}
+            >
+              <CardHeader className="p-6 pb-4">
+                <div className={`w-16 h-16 rounded-2xl bg-white dark:bg-card shadow-md flex items-center justify-center mb-5 p-3 group-hover:scale-110 transition-transform duration-300`}>
+                  {service.Logo ? (
+                    <service.Logo className="w-full h-full" />
+                  ) : service.icon ? (
+                    <service.icon className="w-8 h-8 text-primary" />
+                  ) : null}
+                </div>
+                <CardTitle className="text-xl font-display font-bold">{service.title}</CardTitle>
+              </CardHeader>
+              <CardContent className="p-6 pt-0">
+                <CardDescription className="text-sm leading-relaxed text-muted-foreground">
+                  {service.description}
+                </CardDescription>
+              </CardContent>
+            </Card>
           ))}
         </div>
 
