@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Cloud, Server, Database, ArrowRight, Shield, Zap } from "lucide-react";
+import { HeroBackground3D } from "@/components/three/HeroBackground3D";
 
 export const HeroSection = () => {
   return (
@@ -22,6 +23,10 @@ export const HeroSection = () => {
           }}
         />
       </div>
+
+      {/* 3D Background */}
+      <HeroBackground3D />
+
 
       <div className="container-custom relative py-20 lg:py-0">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
