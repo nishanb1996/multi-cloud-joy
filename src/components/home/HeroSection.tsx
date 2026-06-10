@@ -32,51 +32,53 @@ export const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content */}
           <div className="space-y-8 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold animate-fade-in border border-primary/20">
-              <Cloud className="h-4 w-4" />
-              Cloud · DevOps · AI Experts
-              <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/5 border border-primary/15 animate-fade-in">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+              <span className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.18em] text-primary">
+                Cloud · DevOps · AI Experts
+              </span>
             </div>
 
-            <h1 className="text-responsive-xl font-display font-bold leading-[1.1] animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+            <h1 className="text-responsive-xl font-display font-bold leading-[1.05] tracking-tight animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
               Accelerate Your
               <span className="gradient-text-animated block mt-2">Cloud Journey</span>
             </h1>
 
-            <p className="text-lg sm:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+            <p className="text-base sm:text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
               Transform your infrastructure with enterprise-grade cloud, DevOps,
               and AI solutions across GCP, AWS, and Azure — from CI/CD pipelines
               to agentic AI and production-ready LLM apps.
             </p>
 
-            <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center lg:justify-start animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-              <Button asChild size="lg" className="btn-gradient text-base h-14 px-8">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3 justify-center lg:justify-start animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+              <Button asChild size="lg" className="btn-gradient text-sm h-12 px-7 rounded-xl shadow-lg shadow-primary/20">
                 <Link to="/contact">
                   Get Started
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="h-14 px-8 text-base border-2 hover:bg-muted/50">
+              <Button asChild variant="outline" size="lg" className="h-12 px-7 text-sm rounded-xl border-border hover:bg-muted/50">
                 <Link to="/services">Explore Services</Link>
               </Button>
             </div>
 
             {/* Stats */}
-            <div className="flex flex-wrap justify-center lg:justify-start gap-8 sm:gap-12 pt-8 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
-              <div className="text-center lg:text-left">
-                <p className="text-2xl sm:text-3xl font-display font-bold gradient-text">150+</p>
-                <p className="text-sm text-muted-foreground mt-1">Projects Delivered</p>
+            <div className="flex flex-wrap justify-center lg:justify-start gap-0 pt-10 border-t border-border/60 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
+              <div className="text-center lg:text-left pr-8 sm:pr-12">
+                <p className="text-xl sm:text-2xl font-display font-bold text-foreground tracking-tight">150+</p>
+                <p className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground mt-1">Projects</p>
               </div>
-              <div className="text-center lg:text-left">
-                <p className="text-2xl sm:text-3xl font-display font-bold gradient-text">50+</p>
-                <p className="text-sm text-muted-foreground mt-1">Happy Clients</p>
+              <div className="text-center lg:text-left px-8 sm:px-12 border-l border-border/60">
+                <p className="text-xl sm:text-2xl font-display font-bold text-foreground tracking-tight">50+</p>
+                <p className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground mt-1">Clients</p>
               </div>
-              <div className="text-center lg:text-left">
-                <p className="text-2xl sm:text-3xl font-display font-bold gradient-text">99.9%</p>
-                <p className="text-sm text-muted-foreground mt-1">Uptime Guaranteed</p>
+              <div className="text-center lg:text-left pl-8 sm:pl-12 border-l border-border/60">
+                <p className="text-xl sm:text-2xl font-display font-bold text-foreground tracking-tight">99.9%</p>
+                <p className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground mt-1">Uptime</p>
               </div>
             </div>
           </div>
+
 
           {/* Illustration */}
           <div className="relative h-[400px] sm:h-[450px] lg:h-[600px] animate-fade-in order-first lg:order-last" style={{ animationDelay: "0.2s" }}>
