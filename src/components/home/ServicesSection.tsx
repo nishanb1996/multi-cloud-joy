@@ -9,79 +9,87 @@ const services = [
     Logo: GCPLogo,
     title: "Google Cloud Platform",
     description: "Leverage GCP's cutting-edge AI/ML capabilities, BigQuery analytics, and global infrastructure for scalable solutions.",
-    bgColor: "bg-gradient-to-br from-blue-50 to-blue-100/50 dark:from-blue-950/40 dark:to-blue-900/20",
-    borderColor: "border-blue-200/50 dark:border-blue-800/30",
+    accent: "from-blue-500/10 to-transparent",
+    hoverBorder: "hover:border-blue-300/60",
+    hoverShadow: "hover:shadow-blue-500/10",
+    iconBg: "bg-blue-50",
   },
   {
     Logo: AWSLogo,
     title: "Amazon Web Services",
     description: "Build on AWS's comprehensive suite of services, from EC2 to Lambda, with enterprise-grade security and reliability.",
-    bgColor: "bg-gradient-to-br from-orange-50 to-amber-100/50 dark:from-orange-950/40 dark:to-orange-900/20",
-    borderColor: "border-orange-200/50 dark:border-orange-800/30",
+    accent: "from-orange-500/10 to-transparent",
+    hoverBorder: "hover:border-orange-300/60",
+    hoverShadow: "hover:shadow-orange-500/10",
+    iconBg: "bg-orange-50",
   },
   {
     Logo: AzureLogo,
     title: "Microsoft Azure",
     description: "Integrate seamlessly with Microsoft ecosystem, hybrid cloud capabilities, and enterprise-ready solutions.",
-    bgColor: "bg-gradient-to-br from-sky-50 to-cyan-100/50 dark:from-sky-950/40 dark:to-sky-900/20",
-    borderColor: "border-sky-200/50 dark:border-sky-800/30",
+    accent: "from-sky-500/10 to-transparent",
+    hoverBorder: "hover:border-sky-300/60",
+    hoverShadow: "hover:shadow-sky-500/10",
+    iconBg: "bg-sky-50",
   },
   {
     icon: GitBranch,
     title: "DevOps Solutions",
     description: "Accelerate delivery with CI/CD pipelines, Infrastructure as Code, container orchestration, and monitoring.",
-    bgColor: "bg-gradient-to-br from-violet-50 to-purple-100/50 dark:from-violet-950/40 dark:to-violet-900/20",
-    borderColor: "border-violet-200/50 dark:border-violet-800/30",
+    accent: "from-primary/10 to-transparent",
+    hoverBorder: "hover:border-primary/40",
+    hoverShadow: "hover:shadow-primary/10",
+    iconBg: "bg-primary/5",
+    iconColor: "text-primary",
   },
   {
     icon: Sparkles,
     title: "AI & GenAI Solutions",
     description: "Build agentic AI, RAG copilots, and MLOps pipelines with GPT-5, Claude, and Gemini on your cloud.",
-    bgColor: "bg-gradient-to-br from-fuchsia-50 to-pink-100/50 dark:from-fuchsia-950/40 dark:to-pink-900/20",
-    borderColor: "border-fuchsia-200/50 dark:border-fuchsia-800/30",
+    accent: "from-secondary/10 to-transparent",
+    hoverBorder: "hover:border-secondary/40",
+    hoverShadow: "hover:shadow-secondary/10",
+    iconBg: "bg-secondary/5",
+    iconColor: "text-secondary",
   },
 ];
 
 export const ServicesSection = () => {
   return (
-    <section className="section-padding bg-gradient-to-b from-muted/30 to-background relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl -translate-x-1/2" />
-        <div className="absolute top-1/4 right-0 w-[400px] h-[400px] bg-secondary/5 rounded-full blur-3xl translate-x-1/2" />
-      </div>
-
+    <section className="section-padding bg-background relative overflow-hidden">
       <div className="container-custom relative">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20 px-4">
-          <p className="text-primary font-semibold mb-3 text-sm uppercase tracking-widest">Our Services</p>
-          <h2 className="text-responsive-lg font-display font-bold mb-6">
-            Multi-Cloud <span className="gradient-text">Excellence</span>
-          </h2>
-          <p className="text-muted-foreground text-lg leading-relaxed">
-            We deliver end-to-end cloud solutions tailored to your business needs,
-            with expertise across all major cloud platforms.
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14 sm:mb-16">
+          <div className="max-w-2xl">
+            <p className="text-primary font-bold mb-4 text-xs uppercase tracking-[0.2em]">Our Expertise</p>
+            <h2 className="text-responsive-lg font-display font-bold tracking-tight leading-[1.1]">
+              Multi-Cloud <span className="gradient-text">Excellence</span>
+            </h2>
+          </div>
+          <p className="text-muted-foreground text-base leading-relaxed max-w-md">
+            End-to-end cloud solutions tailored to your business — engineered for reliability, security, and scale.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 stagger-children">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 stagger-children">
           {services.map((service) => (
             <Card
               key={service.title}
-              className={`card-hover border-2 ${service.borderColor} ${service.bgColor} shadow-lg overflow-hidden group`}
+              className={`group relative overflow-hidden bg-card border border-border/60 ${service.hoverBorder} shadow-none hover:shadow-xl ${service.hoverShadow} transition-all duration-300`}
             >
-              <CardHeader className="p-6 pb-4">
-                <div className={`w-16 h-16 rounded-2xl bg-white dark:bg-card shadow-md flex items-center justify-center mb-5 p-3 group-hover:scale-110 transition-transform duration-300`}>
+              <div className={`absolute inset-x-0 top-0 h-px bg-gradient-to-r ${service.accent} opacity-0 group-hover:opacity-100 transition-opacity`} />
+              <CardHeader className="p-7 pb-3">
+                <div className={`w-12 h-12 rounded-xl ${service.iconBg} flex items-center justify-center mb-6 p-2.5`}>
                   {service.Logo ? (
                     <service.Logo className="w-full h-full" />
                   ) : service.icon ? (
-                    <service.icon className="w-8 h-8 text-primary" />
+                    <service.icon className={`w-6 h-6 ${service.iconColor ?? "text-primary"}`} strokeWidth={1.75} />
                   ) : null}
                 </div>
-                <CardTitle className="text-xl font-display font-bold">{service.title}</CardTitle>
+                <CardTitle className="text-base font-display font-bold tracking-tight">{service.title}</CardTitle>
               </CardHeader>
-              <CardContent className="p-6 pt-0">
+              <CardContent className="p-7 pt-0">
                 <CardDescription className="text-sm leading-relaxed text-muted-foreground">
                   {service.description}
                 </CardDescription>
@@ -91,11 +99,11 @@ export const ServicesSection = () => {
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-12 sm:mt-16">
-          <Button asChild variant="outline" size="lg" className="h-14 px-8 text-base border-2 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300">
+        <div className="mt-12 sm:mt-16 flex justify-center">
+          <Button asChild variant="outline" size="lg" className="h-12 px-7 text-sm rounded-xl border-border hover:border-primary hover:text-primary transition-all duration-300">
             <Link to="/services">
               View All Services
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
         </div>
