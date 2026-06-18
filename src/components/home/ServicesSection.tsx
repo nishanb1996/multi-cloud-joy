@@ -99,7 +99,7 @@ export const ServicesSection = () => {
         </div>
 
         {/* CTA */}
-        <div className="mt-12 sm:mt-16 flex justify-center">
+        <div className="mt-8 sm:mt-12 flex justify-center">
           <Button asChild variant="outline" size="lg" className="h-12 px-7 text-sm rounded-xl border-border hover:border-primary hover:text-primary transition-all duration-300">
             <Link to="/services">
               View All Services
