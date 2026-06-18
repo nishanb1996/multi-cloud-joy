@@ -40,7 +40,7 @@ export const Footer = () => {
 
       <div className="container-custom relative">
         {/* Main Footer Content */}
-        <div className="py-16 sm:py-20">
+        <div className="py-10 sm:py-12">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
             {/* Brand */}
             <div className="space-y-6 sm:col-span-2 lg:col-span-1">
