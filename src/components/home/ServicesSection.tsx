@@ -59,28 +59,28 @@ export const ServicesSection = () => {
     <section className="section-padding bg-background relative overflow-hidden">
       <div className="container-custom relative">
         {/* Section Header */}
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14 sm:mb-16">
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 mb-8 sm:mb-12">
           <div className="max-w-2xl">
-            <p className="text-primary font-bold mb-4 text-xs uppercase tracking-[0.2em]">Our Expertise</p>
+            <p className="text-primary font-bold mb-3 text-xs uppercase tracking-[0.2em]">Our Expertise</p>
             <h2 className="text-responsive-lg font-display font-bold tracking-tight leading-[1.1]">
               Multi-Cloud <span className="gradient-text">Excellence</span>
             </h2>
           </div>
-          <p className="text-muted-foreground text-base leading-relaxed max-w-md">
+          <p className="text-muted-foreground text-sm sm:text-base leading-relaxed max-w-md">
             End-to-end cloud solutions tailored to your business — engineered for reliability, security, and scale.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 stagger-children">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 stagger-children">
           {services.map((service) => (
             <Card
               key={service.title}
               className={`group relative overflow-hidden bg-card border border-border/60 ${service.hoverBorder} shadow-none hover:shadow-xl ${service.hoverShadow} transition-all duration-300`}
             >
               <div className={`absolute inset-x-0 top-0 h-px bg-gradient-to-r ${service.accent} opacity-0 group-hover:opacity-100 transition-opacity`} />
-              <CardHeader className="p-7 pb-3">
-                <div className={`w-12 h-12 rounded-xl ${service.iconBg} flex items-center justify-center mb-6 p-2.5`}>
+              <CardHeader className="p-5 sm:p-7 pb-3">
+                <div className={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl ${service.iconBg} flex items-center justify-center mb-4 sm:mb-6 p-2.5`}>
                   {service.Logo ? (
                     <service.Logo className="w-full h-full" />
                   ) : service.icon ? (
@@ -89,7 +89,7 @@ export const ServicesSection = () => {
                 </div>
                 <CardTitle className="text-base font-display font-bold tracking-tight">{service.title}</CardTitle>
               </CardHeader>
-              <CardContent className="p-7 pt-0">
+              <CardContent className="p-5 sm:p-7 pt-0">
                 <CardDescription className="text-sm leading-relaxed text-muted-foreground">
                   {service.description}
                 </CardDescription>
@@ -99,7 +99,7 @@ export const ServicesSection = () => {
         </div>
 
         {/* CTA */}
-        <div className="mt-12 sm:mt-16 flex justify-center">
+        <div className="mt-8 sm:mt-12 flex justify-center">
           <Button asChild variant="outline" size="lg" className="h-12 px-7 text-sm rounded-xl border-border hover:border-primary hover:text-primary transition-all duration-300">
             <Link to="/services">
               View All Services

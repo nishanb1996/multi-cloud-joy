@@ -49,15 +49,15 @@ export const WhyChooseUsSection = () => {
       </div>
 
       <div className="container-custom relative">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-20 items-center">
           {/* Content */}
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8">
             <div className="text-center lg:text-left">
-              <p className="text-primary font-semibold mb-3 text-sm uppercase tracking-widest">Why Choose Us</p>
-              <h2 className="text-responsive-lg font-display font-bold mb-6">
+              <p className="text-primary font-semibold mb-3 text-xs sm:text-sm uppercase tracking-widest">Why Choose Us</p>
+              <h2 className="text-responsive-lg font-display font-bold mb-4 sm:mb-6">
                 Your Trusted Cloud <span className="gradient-text">Partner</span>
               </h2>
-              <p className="text-muted-foreground text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed">
+              <p className="text-muted-foreground text-sm sm:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed">
                 We combine deep technical expertise with a commitment to your
                 success. Our team becomes an extension of yours, delivering
                 results that matter.
@@ -85,8 +85,8 @@ export const WhyChooseUsSection = () => {
           </div>
 
           {/* Visual */}
-          <div className="relative order-first lg:order-last">
-            <div className="relative aspect-square max-w-md mx-auto">
+          <div className="relative order-first lg:order-last px-4 sm:px-0">
+            <div className="relative aspect-square max-w-xs sm:max-w-md mx-auto">
               {/* Animated rings */}
               <div className="absolute inset-0 rounded-full border-2 border-dashed border-primary/20 animate-spin-slow" />
               <div className="absolute inset-8 rounded-full border-2 border-dashed border-secondary/20 animate-spin-slow" style={{ animationDirection: 'reverse', animationDuration: '25s' }} />
@@ -99,24 +99,24 @@ export const WhyChooseUsSection = () => {
 
               {/* Center content */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center p-8 rounded-full bg-card shadow-2xl border border-border/50">
-                  <p className="text-5xl sm:text-6xl font-display font-bold gradient-text mb-2">
+                <div className="text-center p-6 sm:p-8 rounded-full bg-card shadow-2xl border border-border/50">
+                  <p className="text-3xl sm:text-5xl md:text-6xl font-display font-bold gradient-text mb-1 sm:mb-2">
                     10+
                   </p>
-                  <p className="text-sm text-muted-foreground font-medium">
+                  <p className="text-xs sm:text-sm text-muted-foreground font-medium">
                     Years of Experience
                   </p>
                 </div>
               </div>
 
               {/* Floating badges */}
-              <div className="absolute top-4 left-8 px-4 py-2 rounded-full glass shadow-lg text-sm font-semibold animate-float border border-white/20">
+              <div className="absolute top-2 left-2 sm:top-4 sm:left-8 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full glass shadow-lg text-xs sm:text-sm font-semibold animate-float border border-white/20">
                 🏆 GCP Partner
               </div>
-              <div className="absolute bottom-4 right-8 px-4 py-2 rounded-full glass shadow-lg text-sm font-semibold animate-float" style={{ animationDelay: "1s" }}>
+              <div className="absolute bottom-2 right-2 sm:bottom-4 sm:right-8 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full glass shadow-lg text-xs sm:text-sm font-semibold animate-float" style={{ animationDelay: "1s" }}>
                 🥇 AWS Partner
               </div>
-              <div className="absolute top-1/2 -right-4 px-4 py-2 rounded-full glass shadow-lg text-sm font-semibold animate-float" style={{ animationDelay: "0.5s" }}>
+              <div className="absolute top-1/2 right-0 sm:-right-4 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full glass shadow-lg text-xs sm:text-sm font-semibold animate-float" style={{ animationDelay: "0.5s" }}>
                 ⭐ Azure Partner
               </div>
             </div>

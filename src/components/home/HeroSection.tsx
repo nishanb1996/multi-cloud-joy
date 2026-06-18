@@ -5,7 +5,7 @@ import { HeroBackground3D } from "@/components/three/HeroBackground3D";
 
 export const HeroSection = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-br from-accent via-background to-muted">
+    <section className="relative min-h-[auto] lg:min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-br from-accent via-background to-muted">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Gradient Orbs */}
@@ -28,10 +28,10 @@ export const HeroSection = () => {
       <HeroBackground3D />
 
 
-      <div className="container-custom relative py-20 lg:py-0">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div className="container-custom relative py-10 sm:py-14 lg:py-0">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Content */}
-          <div className="space-y-8 text-center lg:text-left">
+          <div className="space-y-5 sm:space-y-7 text-center lg:text-left">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/5 border border-primary/15 animate-fade-in">
               <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
               <span className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.18em] text-primary">
@@ -63,25 +63,25 @@ export const HeroSection = () => {
             </div>
 
             {/* Stats */}
-            <div className="flex flex-wrap justify-center lg:justify-start gap-0 pt-10 border-t border-border/60 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
-              <div className="text-center lg:text-left pr-8 sm:pr-12">
-                <p className="text-xl sm:text-2xl font-display font-bold text-foreground tracking-tight">150+</p>
-                <p className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground mt-1">Projects</p>
+            <div className="grid grid-cols-3 gap-2 pt-6 sm:pt-8 border-t border-border/60 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
+              <div className="text-center lg:text-left">
+                <p className="text-lg sm:text-2xl font-display font-bold text-foreground tracking-tight">150+</p>
+                <p className="text-[9px] sm:text-xs font-bold uppercase tracking-[0.15em] text-muted-foreground mt-1">Projects</p>
               </div>
-              <div className="text-center lg:text-left px-8 sm:px-12 border-l border-border/60">
-                <p className="text-xl sm:text-2xl font-display font-bold text-foreground tracking-tight">50+</p>
-                <p className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground mt-1">Clients</p>
+              <div className="text-center lg:text-left sm:border-l sm:border-border/60 sm:pl-6">
+                <p className="text-lg sm:text-2xl font-display font-bold text-foreground tracking-tight">50+</p>
+                <p className="text-[9px] sm:text-xs font-bold uppercase tracking-[0.15em] text-muted-foreground mt-1">Clients</p>
               </div>
-              <div className="text-center lg:text-left pl-8 sm:pl-12 border-l border-border/60">
-                <p className="text-xl sm:text-2xl font-display font-bold text-foreground tracking-tight">99.9%</p>
-                <p className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground mt-1">Uptime</p>
+              <div className="text-center lg:text-left sm:border-l sm:border-border/60 sm:pl-6">
+                <p className="text-lg sm:text-2xl font-display font-bold text-foreground tracking-tight">99.9%</p>
+                <p className="text-[9px] sm:text-xs font-bold uppercase tracking-[0.15em] text-muted-foreground mt-1">Uptime</p>
               </div>
             </div>
           </div>
 
 
           {/* Illustration */}
-          <div className="relative h-[400px] sm:h-[450px] lg:h-[600px] animate-fade-in order-first lg:order-last" style={{ animationDelay: "0.2s" }}>
+          <div className="relative h-[280px] sm:h-[400px] lg:h-[600px] animate-fade-in order-first lg:order-last" style={{ animationDelay: "0.2s" }}>
             <div className="relative w-full h-full flex items-center justify-center">
               {/* Rotating Ring */}
               <div className="absolute w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] md:w-[380px] md:h-[380px] lg:w-[420px] lg:h-[420px] rounded-full border-2 border-dashed border-primary/20 animate-spin-slow" />
