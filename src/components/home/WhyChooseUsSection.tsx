@@ -86,7 +86,7 @@ export const WhyChooseUsSection = () => {
 
           {/* Visual */}
           <div className="relative order-first lg:order-last px-4 sm:px-0">
-            <div className="relative aspect-square max-w-md mx-auto">
+            <div className="relative aspect-square max-w-xs sm:max-w-md mx-auto">
               {/* Animated rings */}
               <div className="absolute inset-0 rounded-full border-2 border-dashed border-primary/20 animate-spin-slow" />
               <div className="absolute inset-8 rounded-full border-2 border-dashed border-secondary/20 animate-spin-slow" style={{ animationDirection: 'reverse', animationDuration: '25s' }} />
