@@ -99,11 +99,11 @@ export const WhyChooseUsSection = () => {
 
               {/* Center content */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center p-8 rounded-full bg-card shadow-2xl border border-border/50">
-                  <p className="text-5xl sm:text-6xl font-display font-bold gradient-text mb-2">
+                <div className="text-center p-6 sm:p-8 rounded-full bg-card shadow-2xl border border-border/50">
+                  <p className="text-3xl sm:text-5xl md:text-6xl font-display font-bold gradient-text mb-1 sm:mb-2">
                     10+
                   </p>
-                  <p className="text-sm text-muted-foreground font-medium">
+                  <p className="text-xs sm:text-sm text-muted-foreground font-medium">
                     Years of Experience
                   </p>
                 </div>
