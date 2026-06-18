@@ -110,13 +110,13 @@ export const WhyChooseUsSection = () => {
               </div>
 
               {/* Floating badges */}
-              <div className="absolute top-4 left-8 px-4 py-2 rounded-full glass shadow-lg text-sm font-semibold animate-float border border-white/20">
+              <div className="absolute top-2 left-2 sm:top-4 sm:left-8 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full glass shadow-lg text-xs sm:text-sm font-semibold animate-float border border-white/20">
                 🏆 GCP Partner
               </div>
-              <div className="absolute bottom-4 right-8 px-4 py-2 rounded-full glass shadow-lg text-sm font-semibold animate-float" style={{ animationDelay: "1s" }}>
+              <div className="absolute bottom-2 right-2 sm:bottom-4 sm:right-8 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full glass shadow-lg text-xs sm:text-sm font-semibold animate-float" style={{ animationDelay: "1s" }}>
                 🥇 AWS Partner
               </div>
-              <div className="absolute top-1/2 -right-4 px-4 py-2 rounded-full glass shadow-lg text-sm font-semibold animate-float" style={{ animationDelay: "0.5s" }}>
+              <div className="absolute top-1/2 right-0 sm:-right-4 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full glass shadow-lg text-xs sm:text-sm font-semibold animate-float" style={{ animationDelay: "0.5s" }}>
                 ⭐ Azure Partner
               </div>
             </div>
