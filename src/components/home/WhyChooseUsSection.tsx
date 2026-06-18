@@ -49,15 +49,15 @@ export const WhyChooseUsSection = () => {
       </div>
 
       <div className="container-custom relative">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-20 items-center">
           {/* Content */}
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8">
             <div className="text-center lg:text-left">
-              <p className="text-primary font-semibold mb-3 text-sm uppercase tracking-widest">Why Choose Us</p>
-              <h2 className="text-responsive-lg font-display font-bold mb-6">
+              <p className="text-primary font-semibold mb-3 text-xs sm:text-sm uppercase tracking-widest">Why Choose Us</p>
+              <h2 className="text-responsive-lg font-display font-bold mb-4 sm:mb-6">
                 Your Trusted Cloud <span className="gradient-text">Partner</span>
               </h2>
-              <p className="text-muted-foreground text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed">
+              <p className="text-muted-foreground text-sm sm:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed">
                 We combine deep technical expertise with a commitment to your
                 success. Our team becomes an extension of yours, delivering
                 results that matter.
