@@ -28,10 +28,10 @@ export const HeroSection = () => {
       <HeroBackground3D />
 
 
-      <div className="container-custom relative py-20 lg:py-0">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div className="container-custom relative py-10 sm:py-14 lg:py-0">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Content */}
-          <div className="space-y-8 text-center lg:text-left">
+          <div className="space-y-5 sm:space-y-7 text-center lg:text-left">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/5 border border-primary/15 animate-fade-in">
               <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
               <span className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.18em] text-primary">
