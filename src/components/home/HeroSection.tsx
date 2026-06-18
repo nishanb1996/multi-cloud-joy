@@ -63,18 +63,18 @@ export const HeroSection = () => {
             </div>
 
             {/* Stats */}
-            <div className="flex flex-wrap justify-center lg:justify-start gap-0 pt-10 border-t border-border/60 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
-              <div className="text-center lg:text-left pr-8 sm:pr-12">
-                <p className="text-xl sm:text-2xl font-display font-bold text-foreground tracking-tight">150+</p>
-                <p className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground mt-1">Projects</p>
+            <div className="grid grid-cols-3 gap-2 pt-6 sm:pt-8 border-t border-border/60 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
+              <div className="text-center lg:text-left">
+                <p className="text-lg sm:text-2xl font-display font-bold text-foreground tracking-tight">150+</p>
+                <p className="text-[9px] sm:text-xs font-bold uppercase tracking-[0.15em] text-muted-foreground mt-1">Projects</p>
               </div>
-              <div className="text-center lg:text-left px-8 sm:px-12 border-l border-border/60">
-                <p className="text-xl sm:text-2xl font-display font-bold text-foreground tracking-tight">50+</p>
-                <p className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground mt-1">Clients</p>
+              <div className="text-center lg:text-left sm:border-l sm:border-border/60 sm:pl-6">
+                <p className="text-lg sm:text-2xl font-display font-bold text-foreground tracking-tight">50+</p>
+                <p className="text-[9px] sm:text-xs font-bold uppercase tracking-[0.15em] text-muted-foreground mt-1">Clients</p>
               </div>
-              <div className="text-center lg:text-left pl-8 sm:pl-12 border-l border-border/60">
-                <p className="text-xl sm:text-2xl font-display font-bold text-foreground tracking-tight">99.9%</p>
-                <p className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground mt-1">Uptime</p>
+              <div className="text-center lg:text-left sm:border-l sm:border-border/60 sm:pl-6">
+                <p className="text-lg sm:text-2xl font-display font-bold text-foreground tracking-tight">99.9%</p>
+                <p className="text-[9px] sm:text-xs font-bold uppercase tracking-[0.15em] text-muted-foreground mt-1">Uptime</p>
               </div>
             </div>
           </div>
