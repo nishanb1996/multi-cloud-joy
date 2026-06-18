@@ -23,7 +23,7 @@ const partners = [
 
 export const PartnersSection = () => {
   return (
-    <section className="py-16 sm:py-20 bg-muted/30 relative overflow-hidden">
+    <section className="py-10 sm:py-12 bg-muted/30 relative overflow-hidden">
       {/* Subtle background pattern */}
       <div className="absolute inset-0 opacity-50">
         <div className="absolute top-0 left-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
