@@ -5,7 +5,7 @@ import { HeroBackground3D } from "@/components/three/HeroBackground3D";
 
 export const HeroSection = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-br from-accent via-background to-muted">
+    <section className="relative min-h-[auto] lg:min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-br from-accent via-background to-muted">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Gradient Orbs */}
