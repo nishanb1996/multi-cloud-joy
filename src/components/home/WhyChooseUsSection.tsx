@@ -85,7 +85,7 @@ export const WhyChooseUsSection = () => {
           </div>
 
           {/* Visual */}
-          <div className="relative order-first lg:order-last">
+          <div className="relative order-first lg:order-last px-4 sm:px-0">
             <div className="relative aspect-square max-w-md mx-auto">
               {/* Animated rings */}
               <div className="absolute inset-0 rounded-full border-2 border-dashed border-primary/20 animate-spin-slow" />
