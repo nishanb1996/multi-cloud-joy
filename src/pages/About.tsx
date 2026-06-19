@@ -1,4 +1,5 @@
 import { Layout } from "@/components/layout";
+import { SEO } from "@/components/SEO";
 import { Card, CardContent } from "@/components/ui/card";
 import { Target, Eye, Heart, Users, Award, Rocket } from "lucide-react";
 
@@ -32,6 +33,11 @@ const milestones = [
 const About = () => {
   return (
     <Layout>
+      <SEO
+        title="About Cloudignitia | Cloud & DevOps Consulting Team"
+        description="Meet the certified cloud architects and DevOps engineers behind Cloudignitia. Learn our mission, values, and track record across AWS, GCP, and Azure."
+        path="/about"
+      />
       {/* Hero Section */}
       <section className="section-padding bg-gradient-to-br from-accent via-background to-muted">
         <div className="container-custom">
