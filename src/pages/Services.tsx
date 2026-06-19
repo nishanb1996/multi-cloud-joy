@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout";
+import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Cloud, Cog, Sparkles } from "lucide-react";
 import { CloudServicesSection, DevOpsServicesSection, AIServicesSection } from "@/components/services";
@@ -7,6 +8,11 @@ import { CloudServicesSection, DevOpsServicesSection, AIServicesSection } from "
 const Services = () => {
   return (
     <Layout>
+      <SEO
+        title="Cloud, DevOps & AI Services | Cloudignitia"
+        description="End-to-end cloud, DevOps, and AI services: multi-cloud migration on AWS/GCP/Azure, Kubernetes, CI/CD, observability, and AI/ML enablement."
+        path="/services"
+      />
       {/* Hero Section */}
       <section className="section-padding bg-gradient-to-br from-accent via-background to-muted relative overflow-hidden">
         {/* Background Elements */}

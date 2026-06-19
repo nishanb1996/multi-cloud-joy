@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Layout } from "@/components/layout";
+import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -120,6 +121,11 @@ const Contact = () => {
 
   return (
     <Layout>
+      <SEO
+        title="Contact Cloudignitia | Talk to a Cloud & DevOps Expert"
+        description="Get in touch with Cloudignitia for cloud migration, DevOps consulting, or 24/7 managed support. We typically respond within one business day."
+        path="/contact"
+      />
       {/* Hero Section */}
       <section className="section-padding bg-gradient-to-br from-accent via-background to-muted">
         <div className="container-custom">
