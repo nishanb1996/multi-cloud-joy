@@ -162,15 +162,15 @@ export const CloudServicesSection = () => {
         </div>
 
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className="w-full max-w-md mx-auto grid grid-cols-3 mb-8 sm:mb-12">
+          <TabsList className="w-full max-w-md mx-auto grid grid-cols-3 mb-8 sm:mb-12 h-auto">
             {cloudProviders.map((provider) => (
               <TabsTrigger
                 key={provider.id}
                 value={provider.id}
-                className="flex items-center gap-2 data-[state=active]:bg-background py-2 sm:py-3"
+                className="flex items-center justify-center gap-1.5 sm:gap-2 data-[state=active]:bg-background py-2 sm:py-3 text-xs sm:text-sm"
               >
-                <provider.Logo className="w-5 h-5 sm:w-6 sm:h-6" />
-                <span className="hidden sm:inline font-medium">{provider.name}</span>
+                <provider.Logo className="w-4 h-4 sm:w-5 sm:h-5" />
+                <span className="font-medium">{provider.name}</span>
               </TabsTrigger>
             ))}
           </TabsList>
