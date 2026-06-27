@@ -22,37 +22,37 @@ const Services = () => {
         </div>
 
         <div className="container-custom relative">
-          <div className="max-w-4xl mx-auto text-center px-4">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
-              <Cloud className="w-4 h-4" />
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-xs sm:text-sm font-medium mb-4 sm:mb-6">
+              <Cloud className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               Cloud, DevOps & AI Solutions
             </div>
-            <h1 className="text-responsive-xl font-display font-bold mb-6">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4 sm:mb-6 leading-tight">
               Transform Your Business with
-              <span className="gradient-text block">Cloud, DevOps & AI Excellence</span>
+              <span className="gradient-text block mt-1">Cloud, DevOps & AI Excellence</span>
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-6 sm:mb-8 leading-relaxed">
               From cloud migration and DevOps automation to AI-powered intelligence,
               we deliver end-to-end solutions that help you build faster, scale smarter,
               and innovate with confidence.
             </p>
-            <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center">
-              <Button asChild size="lg" className="btn-gradient">
+            <div className="flex flex-wrap gap-2 sm:gap-3 justify-center">
+              <Button asChild size="sm" className="btn-gradient text-xs sm:text-sm h-10 sm:h-11 px-4 sm:px-6">
                 <a href="#cloud-services">
-                  <Cloud className="mr-2 h-5 w-5" />
-                  Cloud Services
+                  <Cloud className="mr-1.5 h-4 w-4" />
+                  Cloud
                 </a>
               </Button>
-              <Button asChild size="lg" variant="outline">
+              <Button asChild size="sm" variant="outline" className="text-xs sm:text-sm h-10 sm:h-11 px-4 sm:px-6">
                 <a href="#devops">
-                  <Cog className="mr-2 h-5 w-5" />
-                  DevOps Solutions
+                  <Cog className="mr-1.5 h-4 w-4" />
+                  DevOps
                 </a>
               </Button>
-              <Button asChild size="lg" variant="outline">
+              <Button asChild size="sm" variant="outline" className="text-xs sm:text-sm h-10 sm:h-11 px-4 sm:px-6">
                 <a href="#ai-services">
-                  <Sparkles className="mr-2 h-5 w-5" />
-                  AI Solutions
+                  <Sparkles className="mr-1.5 h-4 w-4" />
+                  AI
                 </a>
               </Button>
             </div>
