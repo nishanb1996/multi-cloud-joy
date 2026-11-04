@@ -32,10 +32,10 @@ export const PartnersSection = () => {
 
       <div className="container-custom relative">
         <div className="text-center mb-10 sm:mb-12">
-          <p className="text-sm text-muted-foreground font-medium uppercase tracking-widest mb-2">
+          <p className="text-primary font-bold text-xs uppercase tracking-[0.2em] mb-3">
             Trusted Partnerships
           </p>
-          <h2 className="text-2xl sm:text-3xl font-display font-bold">
+          <h2 className="text-2xl sm:text-3xl font-display font-bold tracking-tight">
             Official Cloud <span className="gradient-text">Partners</span>
           </h2>
         </div>
