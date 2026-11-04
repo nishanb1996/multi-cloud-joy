@@ -41,14 +41,14 @@ export const ProcessSection = () => {
 
       <div className="container-custom relative">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16 px-4">
-          <p className="text-primary font-semibold mb-3 text-sm uppercase tracking-widest">
+        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10 px-4">
+          <p className="text-primary font-bold mb-3 text-xs uppercase tracking-[0.2em]">
             Our Process
           </p>
-          <h2 className="text-responsive-lg font-display font-bold mb-6">
+          <h2 className="text-responsive-lg font-display font-bold mb-4 sm:mb-5 tracking-tight leading-[1.1]">
             How We <span className="gradient-text">Work</span>
           </h2>
-          <p className="text-muted-foreground text-lg leading-relaxed">
+          <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
             A proven four-step methodology that delivers results — from
             discovery to continuous optimization.
           </p>
@@ -61,9 +61,9 @@ export const ProcessSection = () => {
               key={item.step}
               className="group relative card-premium p-6 sm:p-8 text-center card-hover"
             >
-              {/* Step number watermark */}
-              <span className="absolute top-4 right-4 text-5xl font-display font-bold text-muted/30 select-none">
-                {item.step}
+              {/* Step number pill */}
+              <span className="absolute top-4 right-4 text-[10px] font-display font-bold tracking-[0.15em] text-muted-foreground/60 bg-muted/70 border border-border/50 px-2 py-0.5 rounded-full select-none">
+                STEP {item.step}
               </span>
 
               <div className="relative">
