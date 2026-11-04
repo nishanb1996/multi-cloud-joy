@@ -27,7 +27,7 @@ const features = [
     title: "Dedicated Teams",
     description: "Personalized attention with dedicated project managers and technical leads.",
     iconBg: "bg-primary/10",
-    iconColor: "text-green-dark",
+    iconColor: "text-brand-green-dark",
   },
   {
     icon: Zap,
