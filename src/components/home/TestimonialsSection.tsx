@@ -36,12 +36,12 @@ export const TestimonialsSection = () => {
 
       <div className="container-custom relative">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16 px-4">
-          <p className="text-primary font-semibold mb-3 text-sm uppercase tracking-widest">Testimonials</p>
-          <h2 className="text-responsive-lg font-display font-bold mb-6">
+        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10 px-4">
+          <p className="text-primary font-bold mb-3 text-xs uppercase tracking-[0.2em]">Testimonials</p>
+          <h2 className="text-responsive-lg font-display font-bold mb-4 sm:mb-5 tracking-tight leading-[1.1]">
             What Our Clients <span className="gradient-text">Say</span>
           </h2>
-          <p className="text-muted-foreground text-lg">
+          <p className="text-muted-foreground text-sm sm:text-base">
             Don't just take our word for it — hear from the businesses we've
             helped transform.
           </p>
