@@ -5,37 +5,43 @@ const features = [
     icon: Shield,
     title: "Multi-Cloud Expertise",
     description: "Certified professionals across GCP, AWS, and Azure for comprehensive cloud solutions.",
-    color: "from-emerald-500 to-green-600",
+    iconBg: "bg-primary/10",
+    iconColor: "text-primary",
   },
   {
     icon: Clock,
     title: "24/7 Support",
     description: "Round-the-clock monitoring and support to ensure your systems are always running.",
-    color: "from-blue-500 to-cyan-600",
+    iconBg: "bg-secondary/10",
+    iconColor: "text-secondary",
   },
   {
     icon: Award,
     title: "Certified Engineers",
     description: "Team of certified cloud architects and DevOps engineers with proven track records.",
-    color: "from-amber-500 to-orange-600",
+    iconBg: "bg-brand-blue-light/10",
+    iconColor: "text-brand-blue-dark",
   },
   {
     icon: Users,
     title: "Dedicated Teams",
     description: "Personalized attention with dedicated project managers and technical leads.",
-    color: "from-purple-500 to-violet-600",
+    iconBg: "bg-primary/10",
+    iconColor: "text-brand-green-dark",
   },
   {
     icon: Zap,
     title: "Fast Deployment",
     description: "Rapid implementation with our proven methodologies and automation frameworks.",
-    color: "from-rose-500 to-pink-600",
+    iconBg: "bg-secondary/10",
+    iconColor: "text-secondary",
   },
   {
     icon: Headphones,
     title: "Ongoing Partnership",
     description: "Long-term collaboration focused on your continuous growth and optimization.",
-    color: "from-sky-500 to-blue-600",
+    iconBg: "bg-brand-blue-light/10",
+    iconColor: "text-brand-blue-dark",
   },
 ];
 
@@ -70,8 +76,8 @@ export const WhyChooseUsSection = () => {
                   key={feature.title}
                   className="group flex gap-4 p-5 rounded-2xl bg-card/50 hover:bg-card border border-transparent hover:border-border/50 hover:shadow-lg transition-all duration-300"
                 >
-                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                    <feature.icon className="w-6 h-6 text-white" />
+                  <div className={`w-12 h-12 rounded-xl ${feature.iconBg} border border-border/60 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300`}>
+                    <feature.icon className={`w-5 h-5 ${feature.iconColor}`} strokeWidth={1.75} />
                   </div>
                   <div>
                     <h3 className="font-display font-semibold text-base mb-1">{feature.title}</h3>
@@ -110,14 +116,17 @@ export const WhyChooseUsSection = () => {
               </div>
 
               {/* Floating badges */}
-              <div className="absolute top-2 left-2 sm:top-4 sm:left-8 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full glass shadow-lg text-xs sm:text-sm font-semibold animate-float border border-white/20">
-                🏆 GCP Partner
+              <div className="absolute top-2 left-2 sm:top-4 sm:left-8 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full glass shadow-lg text-xs sm:text-sm font-semibold animate-float border border-white/20 flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+                GCP Partner
               </div>
-              <div className="absolute bottom-2 right-2 sm:bottom-4 sm:right-8 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full glass shadow-lg text-xs sm:text-sm font-semibold animate-float" style={{ animationDelay: "1s" }}>
-                🥇 AWS Partner
+              <div className="absolute bottom-2 right-2 sm:bottom-4 sm:right-8 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full glass shadow-lg text-xs sm:text-sm font-semibold animate-float border border-white/20 flex items-center gap-1.5" style={{ animationDelay: "1s" }}>
+                <span className="w-1.5 h-1.5 rounded-full bg-secondary" />
+                AWS Partner
               </div>
-              <div className="absolute top-1/2 right-0 sm:-right-4 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full glass shadow-lg text-xs sm:text-sm font-semibold animate-float" style={{ animationDelay: "0.5s" }}>
-                ⭐ Azure Partner
+              <div className="absolute top-1/2 right-0 sm:-right-4 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full glass shadow-lg text-xs sm:text-sm font-semibold animate-float border border-white/20 flex items-center gap-1.5" style={{ animationDelay: "0.5s" }}>
+                <span className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-primary to-secondary" />
+                Azure Partner
               </div>
             </div>
           </div>
