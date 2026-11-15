@@ -7,7 +7,7 @@ interface SEOProps {
   jsonLd?: object;
 }
 
-const SITE_URL = "https://cloudignitia.com";
+const SITE_URL = "https://www.cloudignitia.com";
 
 export const SEO = ({ title, description, path, jsonLd }: SEOProps) => {
   const url = `${SITE_URL}${path}`;
