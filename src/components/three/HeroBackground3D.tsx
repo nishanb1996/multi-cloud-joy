@@ -1,10 +1,9 @@
-import { Suspense, useRef } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
+import { Suspense } from "react";
+import { Canvas } from "@react-three/fiber";
 import { Points, PointMaterial, Float } from "@react-three/drei";
 import * as THREE from "three";
 
 function ParticleField() {
-  const ref = useRef<THREE.Points>(null);
   const count = 1500;
   const positions = new Float32Array(count * 3);
   for (let i = 0; i < count; i++) {
@@ -16,15 +15,8 @@ function ParticleField() {
     positions[i * 3 + 2] = r * Math.cos(phi);
   }
 
-  useFrame((_, delta) => {
-    if (ref.current) {
-      ref.current.rotation.y += delta * 0.04;
-      ref.current.rotation.x += delta * 0.015;
-    }
-  });
-
   return (
-    <Points ref={ref} positions={positions} stride={3} frustumCulled={false}>
+    <Points positions={positions} stride={3} frustumCulled={false}>
       <PointMaterial
         transparent
         color="#10b981"
@@ -39,7 +31,7 @@ function ParticleField() {
 
 function FloatingOrb({ position, color }: { position: [number, number, number]; color: string }) {
   return (
-    <Float speed={1.5} rotationIntensity={0.6} floatIntensity={1.2}>
+    <Float speed={1.5} rotationIntensity={0} floatIntensity={1.2}>
       <mesh position={position}>
         <icosahedronGeometry args={[0.6, 1]} />
         <meshStandardMaterial

@@ -84,7 +84,7 @@ export const HeroSection = () => {
           <div className="relative h-[280px] sm:h-[400px] lg:h-[600px] animate-fade-in order-first lg:order-last" style={{ animationDelay: "0.2s" }}>
             <div className="relative w-full h-full flex items-center justify-center">
               {/* Rotating Ring */}
-              <div className="absolute w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] md:w-[380px] md:h-[380px] lg:w-[420px] lg:h-[420px] rounded-full border-2 border-dashed border-primary/20 animate-spin-slow" />
+              <div className="absolute w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] md:w-[380px] md:h-[380px] lg:w-[420px] lg:h-[420px] rounded-full border-2 border-dashed border-primary/20" />
               
               {/* Main Cloud */}
               <div className="relative">

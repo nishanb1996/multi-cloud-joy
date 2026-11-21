@@ -93,10 +93,10 @@ export const WhyChooseUsSection = () => {
           {/* Visual */}
           <div className="relative order-first lg:order-last px-4 sm:px-0">
             <div className="relative aspect-square max-w-xs sm:max-w-md mx-auto">
-              {/* Animated rings */}
-              <div className="absolute inset-0 rounded-full border-2 border-dashed border-primary/20 animate-spin-slow" />
-              <div className="absolute inset-8 rounded-full border-2 border-dashed border-secondary/20 animate-spin-slow" style={{ animationDirection: 'reverse', animationDuration: '25s' }} />
-              <div className="absolute inset-16 rounded-full border-2 border-dashed border-primary/20 animate-spin-slow" style={{ animationDuration: '30s' }} />
+              {/* Static decorative rings */}
+              <div className="absolute inset-0 rounded-full border-2 border-dashed border-primary/20" />
+              <div className="absolute inset-8 rounded-full border-2 border-dashed border-secondary/20" />
+              <div className="absolute inset-16 rounded-full border-2 border-dashed border-primary/20" />
 
               {/* Background circles */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/10 to-secondary/10" />
